@@ -183,7 +183,7 @@
                 <p class="text-[11px] sm:text-xs text-slate-600 font-medium">IPK Akademik / 4.00</p>
               </div>
               <div class="p-2 rounded-xl bg-white/50 border border-slate-100">
-                <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="5" data-suffix="">0</p>
+                <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="4" data-suffix="">0</p>
                 <p class="text-[11px] sm:text-xs text-slate-600 font-medium">Studi Kasus &amp; Proyek</p>
               </div>
               <div class="p-2 rounded-xl bg-white/50 border border-slate-100">
@@ -473,10 +473,10 @@
 
         <!-- Filter Tabs -->
         <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 reveal">
-          <button data-filter="all" class="filter-btn active px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-slate-900 text-white shadow-md transition-all">Semua Proyek (5)</button>
+          <button data-filter="all" class="filter-btn active px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-slate-900 text-white shadow-md transition-all">Semua Proyek (4)</button>
           <button data-filter="webdev" class="filter-btn px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-rose transition-all">Web Development &amp; PWA</button>
           <button data-filter="process" class="filter-btn px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-rose transition-all">Inovasi Proses</button>
-          <button data-filter="perancangan" class="filter-btn px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-rose transition-all">Perancangan Sistem (2 Proyek)</button>
+          <button data-filter="perancangan" class="filter-btn px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-700 border border-slate-200 hover:border-rose transition-all">Perancangan Sistem &amp; DFD</button>
         </div>
 
         <!-- Projects Grid -->
@@ -773,50 +773,122 @@
 
 
           <!-- ═════════════════════════════════════════════════════════════════
-               PROYEK 4: PERANCANGAN SISTEM 1 (FULL EDGE-TO-EDGE IMAGE HEADER)
+               PROYEK 4: PERANCANGAN SISTEM (SIAKAD & MONITORING SANTRI KLIEN)
                ═════════════════════════════════════════════════════════════════ -->
           <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-300 flex flex-col justify-between interactive-tilt" data-category="perancangan" data-tilt-max="7"><div class="card-glare"></div>
             <div>
-              <!-- Full-bleed Slider Container (4 Foto Asli) -->
+              <!-- Full-bleed Slider Container (8 Diagram Asli: SIAKAD + Proyek Klien Santri) -->
               <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
                 <div class="slider-container w-full h-full" data-slider>
                   <div class="slider-track flex h-full">
 
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo1.jpg" data-caption="Perancangan Sistem - Diagram Alur Sistem Terkomputerisasi">
-                      <img src="assets/perancangan/photo1.jpg" alt="Perancangan Sistem - Diagram Alur 1" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Diagram Alur Sistem</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                    <!-- Slide 1: Flowchart Lama SIAKAD -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo3.jpg" data-caption="Flowchart Lama - Alur Rekap Nilai Konvensional Excel pada Sistem Informasi Akademik">
+                      <img src="assets/perancangan/photo3.jpg" alt="Flowchart Lama Sistem Informasi Akademik" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-amber-300 uppercase tracking-wider bg-amber-950/80 px-2 py-0.5 rounded mb-1">SIAKAD &bull; Alur Konvensional</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Flowchart Lama (Sistem Informasi Akademik)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
                           <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
                         </span>
                       </div>
                     </div>
 
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo2.jpg" data-caption="Perancangan Sistem - Skema Relasi Basis Data">
-                      <img src="assets/perancangan/photo2.jpg" alt="Perancangan Sistem - Skema Database" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Skema Relasi Database</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                    <!-- Slide 2: Flowchart Baru SIAKAD -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo4.jpg" data-caption="Flowchart Sistem Baru - Otomatisasi Input Nilai, Generate E-Rapor &amp; Notifikasi Orang Tua (SIAKAD)">
+                      <img src="assets/perancangan/photo4.jpg" alt="Flowchart Sistem Baru SIAKAD Digital" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-emerald-300 uppercase tracking-wider bg-emerald-950/80 px-2 py-0.5 rounded mb-1">SIAKAD &bull; Alur Baru Terintegrasi</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Flowchart Sistem Baru (SIAKAD Digital)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
                           <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
                         </span>
                       </div>
                     </div>
 
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo3.jpg" data-caption="Perancangan Sistem - Pemetaan Entitas &amp; Atribut Sistem">
-                      <img src="assets/perancangan/photo3.jpg" alt="Perancangan Sistem - Pemetaan Entitas" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Pemetaan Entitas &amp; Atribut</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                    <!-- Slide 3: Diagram Konteks SIAKAD -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo1.jpg" data-caption="Diagram Konteks (DFD Level 0) - Arus Data Admin, Guru Mapel, Wali Kelas, dan Orang Tua (SIAKAD)">
+                      <img src="assets/perancangan/photo1.jpg" alt="Diagram Konteks SIAKAD DFD Level 0" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-purple-300 uppercase tracking-wider bg-purple-950/80 px-2 py-0.5 rounded mb-1">SIAKAD &bull; Arsitektur Data</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Diagram Konteks DFD Level 0 (SIAKAD)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
                           <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
                         </span>
                       </div>
                     </div>
 
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo4.jpg" data-caption="Perancangan Sistem - Spesifikasi Tabel Basis Data Relasional">
-                      <img src="assets/perancangan/photo4.jpg" alt="Perancangan Sistem - Relasi Tabel" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Relasi Antar Tabel</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                    <!-- Slide 4: ERD SIAKAD -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo5.jpg" data-caption="Entity Relationship Diagram (ERD) - Skema Relasi Basis Data SIAKAD Kurikulum Merdeka Multi-Tabel">
+                      <img src="assets/perancangan/photo5.jpg" alt="Entity Relationship Diagram ERD SIAKAD" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-rose-300 uppercase tracking-wider bg-rose-950/80 px-2 py-0.5 rounded mb-1">SIAKAD &bull; Skema Database</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Entity Relationship Diagram (ERD)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 5: Proyek Klien - HIPO Monitoring Santri -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo2.jpg" data-caption="Diagram Hirarki Sistem (HIPO) - Sistem Monitoring Kehadiran dan Penugasan Santri KIP (Proyek Klien)">
+                      <img src="assets/perancangan/photo2.jpg" alt="Struktur Menu Sistem Monitoring &amp; Penugasan Santri KIP" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-sky-300 uppercase tracking-wider bg-sky-950/80 px-2 py-0.5 rounded mb-1">Proyek Klien &bull; Monitoring Santri KIP</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Diagram Hirarki Menu &amp; Fungsional (HIPO)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 6: Proyek Klien - DFD Level 0 Monitoring Santri -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo6.jpg" data-caption="Diagram Konteks (DFD Level 0) - Sistem Monitoring Kehadiran &amp; Penugasan Santri KIP (Proyek Klien)">
+                      <img src="assets/perancangan/photo6.jpg" alt="DFD Level 0 Sistem Monitoring Kehadiran dan Penugasan Santri KIP" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-cyan-300 uppercase tracking-wider bg-cyan-950/80 px-2 py-0.5 rounded mb-1">Proyek Klien &bull; Monitoring Santri KIP</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Diagram Konteks DFD Level 0</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 7: Proyek Klien - DFD Level 1 Monitoring Santri -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo7.jpg" data-caption="Data Flow Diagram (DFD Level 1) - Sistem Monitoring Kehadiran dan Penugasan Santri KIP (Master, Jadwal, Absensi, Laporan)">
+                      <img src="assets/perancangan/photo7.jpg" alt="DFD Level 1 Sistem Monitoring Kehadiran dan Penugasan Santri KIP" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-teal-300 uppercase tracking-wider bg-teal-950/80 px-2 py-0.5 rounded mb-1">Proyek Klien &bull; Monitoring Santri KIP</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">Data Flow Diagram (DFD Level 1)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
+                        </span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 8: Proyek Klien - DFD Level 2 Monitoring Santri -->
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo8.jpg" data-caption="Data Flow Diagram (DFD Level 2) - Proses 1 Kelola Data Master (Mahasiswa, Jadwal Kuliah, Penugasan Santri KIP)">
+                      <img src="assets/perancangan/photo8.jpg" alt="DFD Level 2 Kelola Data Master Sistem Monitoring Santri" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <div class="pr-2">
+                          <span class="inline-block text-[10px] font-bold text-indigo-300 uppercase tracking-wider bg-indigo-950/80 px-2 py-0.5 rounded mb-1">Proyek Klien &bull; Monitoring Santri KIP</span>
+                          <p class="text-white text-xs font-semibold drop-shadow">DFD Level 2 (Dekomposisi Data Master)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md flex-shrink-0">
                           <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
                         </span>
                       </div>
@@ -831,7 +903,7 @@
                 </div>
 
                 <div class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20">
-                  Perancangan 1 &bull; Pemodelan
+                  Perancangan Sistem &bull; 8 Diagram Nyata
                 </div>
               </div>
 
@@ -839,130 +911,54 @@
               <div class="p-6 sm:p-8 space-y-4">
                 <div class="flex items-center gap-2 text-xs font-semibold text-rose">
                   <i data-lucide="pen-tool" class="w-3.5 h-3.5"></i>
-                  <span>Perancangan Sistem &amp; Arsitektur Basis Data</span>
+                  <span>Perancangan Sistem, Flowchart &amp; Arsitektur Basis Data</span>
                 </div>
 
                 <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-rose transition-colors">
-                  Pemodelan Sistem &amp; Desain Relasi Database (Draw.io)
+                  Pemodelan Sistem Informasi Akademik &amp; Sistem Monitoring Santri KIP (Draw.io)
                 </h3>
 
                 <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Menyusun pemodelan sistem informasi komprehensif menggunakan <strong>Draw.io</strong>. Merancang diagram alur proses, diagram Use Case, Activity, dan Sequence diagram, serta pemetaan relasi antar entitas (ERD) untuk menjamin integritas skema database sebelum tahap koding dimulai.
+                  Menyusun analisis kebutuhan, pemodelan proses bisnis, dan dokumentasi arsitektur data komprehensif menggunakan <strong>Draw.io</strong> yang mencakup 2 studi kasus nyata:
                 </p>
+
+                <div class="bg-rose-50/60 rounded-2xl p-4 border border-rose-100 space-y-2.5 text-xs text-slate-700">
+                  <div>
+                    <span class="font-bold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-rose-500"></span> 1. Sistem Informasi Akademik (SIAKAD):
+                    </span>
+                    <p class="text-slate-600 pl-3.5 mt-0.5 leading-relaxed">
+                      Merancang komparasi <strong>Flowchart Sistem Lama</strong> (rekap Excel manual yang rentan inkonsistensi) vs <strong>Flowchart Sistem Baru</strong> (otomatisasi Kurikulum Merdeka &amp; e-rapor), <strong>Diagram Konteks DFD Level 0</strong>, dan <strong>Entity Relationship Diagram (ERD 3NF)</strong> multi-tabel relasional.
+                    </p>
+                  </div>
+                  <div class="pt-2 border-t border-rose-100">
+                    <span class="font-bold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-sky-500"></span> 2. Sistem Monitoring &amp; Penugasan Santri KIP (Proyek Klien):
+                    </span>
+                    <p class="text-slate-600 pl-3.5 mt-0.5 leading-relaxed">
+                      Merancang arsitektur sistem pengelolaan santri penerima beasiswa KIP, mencakup <strong>Diagram Hirarki Fungsional (HIPO)</strong>, <strong>DFD Level 0</strong>, <strong>DFD Level 1</strong> (alur master data, jadwal tugas, absensi kegiatan, dan laporan pembina), serta dekomposisi <strong>DFD Level 2</strong>.
+                    </p>
+                  </div>
+                </div>
 
                 <!-- Framework / Tool Logos -->
                 <div class="pt-2 border-t border-slate-100">
-                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Aplikasi Pemodelan:</p>
+                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Aplikasi &amp; Standar Pemodelan:</p>
                   <div class="flex flex-wrap items-center gap-2">
                     <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 shadow-xs">
                       <svg class="w-3.5 h-3.5 text-[#F08705]" viewBox="0 0 24 24" fill="currentColor"><path d="M19.7 3.3c-.4-.4-1-.4-1.4 0L12 9.6 5.7 3.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L10.6 11l-6.3 6.3c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3L12 12.4l6.3 6.3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L13.4 11l6.3-6.3c.4-.4.4-1 0-1.4z"/></svg>
                       Draw.io
                     </span>
-                    <span class="badge-tech badge-tech-navy">Diagram UML</span>
-                    <span class="badge-tech badge-tech-rose">Pemetaan ERD</span>
+                    <span class="badge-tech badge-tech-navy">Flowchart Lama vs Baru</span>
+                    <span class="badge-tech badge-tech-rose">DFD Level 0, 1 &amp; 2</span>
+                    <span class="badge-tech badge-tech-navy">Pemetaan ERD 3NF</span>
+                    <span class="badge-tech badge-tech-rose">Proyek Klien Santri</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-
-          <!-- ═════════════════════════════════════════════════════════════════
-               PROYEK 5: PERANCANGAN SISTEM 2 (FULL EDGE-TO-EDGE IMAGE HEADER)
-               ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-400 flex flex-col justify-between interactive-tilt" data-category="perancangan" data-tilt-max="7"><div class="card-glare"></div>
-            <div>
-              <!-- Full-bleed Slider Container (4 Foto Asli) -->
-              <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
-                <div class="slider-container w-full h-full" data-slider>
-                  <div class="slider-track flex h-full">
-
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo5.jpg" data-caption="Perancangan Sistem - Diagram Flowchart Logika Keputusan">
-                      <img src="assets/perancangan/photo5.jpg" alt="Perancangan Sistem - Flowchart Logika" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Flowchart Logika Sistem</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo6.jpg" data-caption="Perancangan Sistem - Data Flow Diagram (DFD Level 0/1)">
-                      <img src="assets/perancangan/photo6.jpg" alt="Perancangan Sistem - Data Flow Diagram DFD" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Data Flow Diagram (DFD)</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo7.jpg" data-caption="Perancangan Sistem - Struktur Alur Dokumen Laporan">
-                      <img src="assets/perancangan/photo7.jpg" alt="Perancangan Sistem - Struktur Dokumen" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Struktur Dokumen Laporan</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/perancangan/photo8.jpg" data-caption="Perancangan Sistem - Verifikasi Alur Proses Bisnis">
-                      <img src="assets/perancangan/photo8.jpg" alt="Perancangan Sistem - Verifikasi Alur" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Verifikasi Alur Proses</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <!-- Controls -->
-                  <button class="slider-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Foto Sebelumnya"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
-                  <button class="slider-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Foto Selanjutnya"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
-                  <div class="slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"></div>
-                </div>
-
-                <div class="absolute top-4 left-4 bg-sky-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20">
-                  Perancangan 2 &bull; Dokumentasi
-                </div>
-              </div>
-
-              <!-- Content -->
-              <div class="p-6 sm:p-8 space-y-4">
-                <div class="flex items-center gap-2 text-xs font-semibold text-rose">
-                  <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-                  <span>Dokumentasi Sistem &amp; Layanan Kerapian Skripsi</span>
-                </div>
-
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-rose transition-colors">
-                  Dokumentasi Sistem (Flowchart &amp; DFD) serta Kerapian Skripsi
-                </h3>
-
-                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Membantu penyusunan berkas spesifikasi teknis dan perancangan diagram alir data (DFD Level 0-2 serta Flowchart sistem) menggunakan <strong>Draw.io</strong>. Berpengalaman pula sebagai penyedia jasa yang membantu rekan-rekan mahasiswa dalam <strong>memperbaiki serta menata kerapian tulisan skripsi</strong> agar memenuhi standar penulisan karya ilmiah kampus.
-                </p>
-
-                <!-- Framework / Tool Logos -->
-                <div class="pt-2 border-t border-slate-100">
-                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Aplikasi yang Digunakan:</p>
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 shadow-xs">
-                      <svg class="w-3.5 h-3.5 text-[#F08705]" viewBox="0 0 24 24" fill="currentColor"><path d="M19.7 3.3c-.4-.4-1-.4-1.4 0L12 9.6 5.7 3.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L10.6 11l-6.3 6.3c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3L12 12.4l6.3 6.3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L13.4 11l6.3-6.3c.4-.4.4-1 0-1.4z"/></svg>
-                      Draw.io (Flowchart &amp; DFD)
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
-                      <svg class="w-3.5 h-3.5 text-[#2B579A]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.17 3H2.83C2.37 3 2 3.37 2 3.83v16.34c0 .46.37.83.83.83h18.34c.46 0 .83-.37.83-.83V3.83c0-.46-.37-.83-.83-.83zm-7.67 13.5l-2.08-8.21h1.72l1.24 5.78 1.34-5.78h1.69l-2.12 8.21h-1.79zm-5.83 0l-2.17-8.21h1.72l1.33 5.78 1.33-5.78h1.62l-2.09 8.21H7.67z"/></svg>
-                      MS Word (Format Skripsi)
-                    </span>
-                    <span class="badge-tech badge-tech-rose">Standardisasi Format</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
