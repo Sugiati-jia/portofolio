@@ -1168,7 +1168,7 @@
             <!-- Right Interactive Form -->
             <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-lg reveal-right">
               <h3 class="font-serif text-xl font-bold text-slate-900 mb-1.5">Kirimkan Pesan Langsung</h3>
-              <p class="text-xs text-slate-600 mb-6">Tuliskan kebutuhan atau peluang kerja sama Anda di bawah ini; email client Anda akan terbuka otomatis.</p>
+              <p class="text-xs text-slate-600 mb-6">Tuliskan kebutuhan atau peluang kerja sama Anda di bawah ini; pesan langsung terkirim ke WhatsApp resmi atau melalui Gmail Web.</p>
 
               <form id="contactForm" class="space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1192,10 +1192,21 @@
                   <textarea id="contactMessage" rows="4" required placeholder="Tuliskan pesan, rincian tawaran kerja, atau kebutuhan sistem yang ingin didiskusikan..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-rose/30 focus:border-rose transition-all resize-none"></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary-rose w-full py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
-                  <i data-lucide="send" class="w-4 h-4"></i>
-                  <span>Kirim Pesan ke Sugiati (parksugiati@gmail.com)</span>
-                </button>
+                <!-- Two Direct Action Buttons -->
+                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                  <button type="button" id="btnSendWA" class="flex-1 py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-md hover:shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-100"></i>
+                    <span>Kirim via WhatsApp (Langsung)</span>
+                  </button>
+                  <button type="button" id="btnSendGmail" class="flex-1 py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold bg-rose-50 hover:bg-rose-100 text-rose border border-rose-300 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] cursor-pointer">
+                    <i data-lucide="mail" class="w-4 h-4 text-rose"></i>
+                    <span>Kirim via Gmail (Web)</span>
+                  </button>
+                </div>
+
+                <p class="text-[11px] text-slate-500 text-center pt-1">
+                  💡 Pilih <strong>WhatsApp</strong> untuk respon instan langsung ke HP Sugiati (083164900791), atau <strong>Gmail (Web)</strong> untuk mengirim email formal via browser ke parksugiati@gmail.com.
+                </p>
               </form>
             </div>
 

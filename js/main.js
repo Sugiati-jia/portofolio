@@ -283,44 +283,92 @@ function initModals() {
   });
 }
 
-/* ─── CONTACT FORM ─── */
+/* ─── CONTACT FORM (DIRECT WHATSAPP & GMAIL WEB) ─── */
 function initContact() {
   const form = document.getElementById('contactForm');
+  const btnWA = document.getElementById('btnSendWA');
+  const btnGmail = document.getElementById('btnSendGmail');
   if (!form) return;
 
-  form.addEventListener('submit', async e => {
+  function getFormData() {
+    const name = (form.querySelector('#contactName, #cName') || {}).value?.trim() || '';
+    const email = (form.querySelector('#contactEmail, #cEmail') || {}).value?.trim() || '';
+    const subject = (form.querySelector('#contactSubject, #cSubject') || {}).value?.trim() || '';
+    const msg = (form.querySelector('#contactMessage, #cMsg') || {}).value?.trim() || '';
+    return { name, email, subject, msg };
+  }
+
+  function validateData(data) {
+    if (!data.name || !data.email || !data.msg) {
+      showToast('error', 'Mohon lengkapi Nama, Email, dan Isi Pesan Anda (*)');
+      return false;
+    }
+    return true;
+  }
+
+  // 1. Kirim via WhatsApp (Langsung masuk ke HP Sugiati)
+  function sendViaWhatsApp() {
+    const data = getFormData();
+    if (!validateData(data)) return;
+
+    const waText = `*Halo Sugiati (Jia), ada pesan dari Portofolio:*
+
+*Nama:* ${data.name}
+*Email:* ${data.email}
+*Perihal:* ${data.subject || 'Diskusi Kerja Sama / Tawaran Posisi'}
+
+*Isi Pesan:*
+${data.msg}
+
+---
+_Pesan dikirim dari website portofolio sugiati-jia.github.io_`;
+
+    const waUrl = `https://wa.me/6283164900791?text=${encodeURIComponent(waText)}`;
+    window.open(waUrl, '_blank');
+    showToast('success', `Membuka WhatsApp untuk mengirim pesan dari ${data.name}!`);
+  }
+
+  // 2. Kirim via Gmail Web (Langsung buka compose tab di browser)
+  function sendViaGmail() {
+    const data = getFormData();
+    if (!validateData(data)) return;
+
+    const gmailSubject = `Pesan Portofolio dari ${data.name}: ${data.subject || 'Diskusi Kerja Sama'}`;
+    const gmailBody = `Halo Sugiati,
+
+Saya ${data.name} (${data.email}) menghubungi Anda melalui website portofolio.
+
+Perihal: ${data.subject || '-'}
+
+Pesan:
+${data.msg}
+
+Salam,
+${data.name}
+${data.email}`;
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=parksugiati@gmail.com&su=${encodeURIComponent(gmailSubject)}&body=${encodeURIComponent(gmailBody)}`;
+    window.open(gmailUrl, '_blank');
+    showToast('success', `Membuka Gmail Web untuk mengirim email ke parksugiati@gmail.com!`);
+  }
+
+  if (btnWA) {
+    btnWA.addEventListener('click', (e) => {
+      e.preventDefault();
+      sendViaWhatsApp();
+    });
+  }
+
+  if (btnGmail) {
+    btnGmail.addEventListener('click', (e) => {
+      e.preventDefault();
+      sendViaGmail();
+    });
+  }
+
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    // Dukung berbagai ID input
-    const name = (form.querySelector('#cName, #contactName') || {}).value?.trim() || '';
-    const email = (form.querySelector('#cEmail, #contactEmail') || {}).value?.trim() || '';
-    const subject = (form.querySelector('#cSubject, #contactSubject') || {}).value?.trim() || '';
-    const msg = (form.querySelector('#cMsg, #contactMessage') || {}).value?.trim() || '';
-
-    if (!name || !email || !msg) {
-      showToast('error', 'Mohon lengkapi semua kolom bertanda bintang (*)');
-      return;
-    }
-
-    const submitBtn = form.querySelector('button[type=submit]');
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<svg class="animate-spin w-4 h-4 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Mengirim...`;
-    }
-
-    const body = `Halo Sugiati,\n\nSaya ${name} (${email}) ingin menghubungi Anda.\n\nPerihal: ${subject || '(tidak ada perihal)'}\n\nPesan:\n${msg}`;
-    const mailto = `mailto:parksugiati@gmail.com?subject=${encodeURIComponent(subject || 'Pesan dari Portofolio - ' + name)}&body=${encodeURIComponent(body)}`;
-
-    setTimeout(() => {
-      window.location.href = mailto;
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = `<i data-lucide="send" class="w-4 h-4"></i> Kirim Pesan`;
-      }
-      form.reset();
-      showToast('success', `Terima kasih, ${name}! Email siap terkirim ke Sugiati.`);
-      if (window.lucide) lucide.createIcons();
-    }, 600);
+    sendViaWhatsApp();
   });
 }
 
