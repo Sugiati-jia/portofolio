@@ -648,3 +648,119 @@ section { padding: 80px 0; }
   transition: opacity 0.25s ease, transform 0.25s ease;
   will-change: transform, opacity;
 }
+
+
+/* ==========================================================================
+   INTERACTIVE SUITE (Instagram Reel Inspired Micro-Interactions)
+   ========================================================================== */
+
+/* ── 3D TILT EFFECT & SPECULAR HOLOGRAPHIC GLARE ── */
+.interactive-tilt {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.25s ease;
+  position: relative;
+}
+
+.card-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 25;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: soft-light;
+}
+
+/* 3D Parallax layers inside tilted cards */
+.interactive-tilt .animate-float-slow,
+.interactive-tilt .animate-float-reverse {
+  transform: translateZ(32px);
+  transition: transform 0.2s ease-out;
+}
+
+/* ── INTERACTIVE CANVAS ── */
+#heroCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── MAGNETIC BUTTONS & INTERACTIVE BADGES ── */
+.btn-primary-rose,
+.btn-secondary-rose,
+.filter-btn,
+.badge-tech {
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.badge-tech:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(232, 93, 140, 0.18);
+  cursor: pointer;
+}
+
+/* ── CLICK RIPPLE ANIMATION ── */
+.click-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  border: 2px solid rgba(232, 93, 140, 0.65);
+  background: radial-gradient(circle, rgba(232, 93, 140, 0.25) 0%, rgba(232, 93, 140, 0) 70%);
+  transform: translate(-50%, -50%) scale(0.2);
+  animation: ripplePop 0.55s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes ripplePop {
+  0% {
+    transform: translate(-50%, -50%) scale(0.15);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.8);
+    opacity: 0;
+  }
+}
+
+/* ── FLOATING INTERACTIVE DOCK ── */
+#interactiveDock {
+  box-shadow: 0 10px 30px -5px rgba(13, 27, 42, 0.15), 0 0 0 1px rgba(232, 93, 140, 0.15);
+  animation: dockEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dockEnter {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#interactiveDock:hover {
+  box-shadow: 0 14px 35px -5px rgba(232, 93, 140, 0.25), 0 0 0 1px rgba(232, 93, 140, 0.3);
+}
+
+/* ── HOVER SHINE ON IMAGES ── */
+.slider-slide::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  transition: none;
+}
+.project-card:hover .slider-slide::after {
+  left: 200%;
+  transition: left 0.9s ease-in-out;
+}

@@ -116,8 +116,10 @@
     <!-- =========================================================================
          SECTION 1: HERO SECTION
          ========================================================================= -->
-    <section id="hero" class="relative min-h-[90vh] flex items-center py-12 lg:py-20 bg-tech-grid">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full">
+    <section id="hero" class="relative min-h-[90vh] flex items-center py-12 lg:py-20 bg-tech-grid overflow-hidden">
+      <!-- Interactive Dynamic Particle Canvas (Constellation & Mouse Glow) -->
+      <canvas id="heroCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
 
           <!-- Text Column -->
@@ -199,7 +201,7 @@
               <div class="absolute inset-0 bg-gradient-to-tr from-rose-200/60 to-slate-200/60 rounded-3xl transform rotate-2 scale-95 -z-10 blur-sm"></div>
 
               <!-- Main Glass Card -->
-              <div class="glass-panel rounded-3xl p-6 sm:p-7 shadow-2xl relative border border-rose-200/70">
+              <div class="glass-panel rounded-3xl p-6 sm:p-7 shadow-2xl relative border border-rose-200/70 interactive-tilt" data-tilt-max="10"><div class="card-glare"></div>
 
                 <!-- Card Header -->
                 <div class="flex items-center justify-between pb-3.5 border-b border-rose-100/90">
@@ -208,7 +210,7 @@
                     <span class="w-3 h-3 rounded-full bg-amber-400"></span>
                     <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
                   </div>
-                  <span class="text-[11px] font-mono text-slate-500 font-medium">sugiati.dev</span>
+                  <span class="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Siap Kerja</span>
                 </div>
 
                 <!-- Profile Photo -->
@@ -227,7 +229,7 @@
                   <div class="flex items-center justify-between mb-2.5 text-xs font-bold text-slate-800">
                     <span class="flex items-center gap-1.5">
                       <i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose"></i>
-                      <span>Keahlian &amp; Kompetensi Inti (Sesuai CV)</span>
+                      <span>Keahlian &amp; Kompetensi Inti</span>
                     </span>
                   </div>
 
@@ -483,7 +485,7 @@
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 1: SIAKAD (FULL EDGE-TO-EDGE IMAGE HEADER)
                ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal flex flex-col justify-between" data-category="webdev">
+          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal flex flex-col justify-between interactive-tilt" data-category="webdev" data-tilt-max="7"><div class="card-glare"></div>
             <div>
               <!-- Full-bleed Slider Container (No black margin, full card width) -->
               <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
@@ -585,7 +587,7 @@
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 2: LAUNDRY VOUCHER (FULL EDGE-TO-EDGE IMAGE HEADER)
                ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-100 flex flex-col justify-between" data-category="process">
+          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-100 flex flex-col justify-between interactive-tilt" data-category="process" data-tilt-max="7"><div class="card-glare"></div>
             <div>
               <!-- Full-bleed Slider Container (5 Screenshots Asli) -->
               <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
@@ -693,7 +695,7 @@
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 3: KAMPUS MENGAJAR (FULL EDGE-TO-EDGE IMAGE HEADER)
                ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-200 flex flex-col justify-between" data-category="process">
+          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-200 flex flex-col justify-between interactive-tilt" data-category="process" data-tilt-max="7"><div class="card-glare"></div>
             <div>
               <!-- Full-bleed Slider Container (Foto Asli Lapangan) -->
               <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
@@ -773,7 +775,7 @@
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 4: PERANCANGAN SISTEM 1 (FULL EDGE-TO-EDGE IMAGE HEADER)
                ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-300 flex flex-col justify-between" data-category="perancangan">
+          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-300 flex flex-col justify-between interactive-tilt" data-category="perancangan" data-tilt-max="7"><div class="card-glare"></div>
             <div>
               <!-- Full-bleed Slider Container (4 Foto Asli) -->
               <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
@@ -868,7 +870,7 @@
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 5: PERANCANGAN SISTEM 2 (FULL EDGE-TO-EDGE IMAGE HEADER)
                ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-400 flex flex-col justify-between" data-category="perancangan">
+          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal delay-400 flex flex-col justify-between interactive-tilt" data-category="perancangan" data-tilt-max="7"><div class="card-glare"></div>
             <div>
               <!-- Full-bleed Slider Container (4 Foto Asli) -->
               <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
@@ -1259,7 +1261,32 @@
     <span id="toastMessage" class="text-xs sm:text-sm font-medium"></span>
   </div>
 
-  <!-- Floating Back to Top -->
+  <!-- Floating Interactive Control Dock -->
+  <div id="interactiveDock" class="fixed bottom-6 right-6 z-40 flex items-center gap-2 bg-white/95 backdrop-blur-md border border-rose-200 shadow-2xl rounded-full p-1.5 pl-3 transition-all duration-300 hover:shadow-rose-500/10">
+    <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-700 pr-1 select-none">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span>Siap Kerja</span>
+    </span>
+    <a href="https://wa.me/6283164900791" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-bold border border-emerald-200 flex items-center gap-1.5 transition-all hover:scale-105" title="Hubungi via WhatsApp">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+      <span class="hidden md:inline">WhatsApp</span>
+    </a>
+    <button id="soundToggleBtn" aria-label="Toggle Sound Effects" class="w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-100 text-rose border border-rose-200 flex items-center justify-center transition-all hover:scale-110" title="Efek Suara Interaktif (Klik)">
+      <i data-lucide="volume-2" id="soundIcon" class="w-4 h-4"></i>
+    </button>
+    <button id="backToTopProgress" aria-label="Kembali ke Atas" class="relative w-9 h-9 rounded-full bg-slate-900 text-white hover:bg-rose transition-all flex items-center justify-center shadow-md hover:scale-110">
+      <svg class="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 36 36">
+        <circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2.5"></circle>
+        <circle id="scrollProgressCircle" cx="18" cy="18" r="15.9" fill="none" stroke="#e85d8c" stroke-width="2.8" stroke-dasharray="100, 100" stroke-dashoffset="100" stroke-linecap="round" class="transition-all duration-100"></circle>
+      </svg>
+      <i data-lucide="arrow-up" class="w-4 h-4 z-10"></i>
+    </button>
+  </div>
+
+  <!-- Floating Back to Top (Legacy kept for script compatibility) -->
   <button id="backToTopBtn" aria-label="Kembali ke Atas" class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-white/90 backdrop-blur-md border border-rose-200 text-slate-700 hover:text-rose hover:bg-rose-50 shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none hover:scale-110">
     <i data-lucide="arrow-up" class="w-5 h-5"></i>
   </button>

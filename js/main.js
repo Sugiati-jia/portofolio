@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initModalTabs();
   initSliders();
   initLightbox();
+  initHeroCanvas();
+  initInteractiveTilt();
+  initMagnetic();
+  initSoundFeedback();
+  initClickRipple();
+  initScrollDock();
 });
 
 /* ─── SCROLL PROGRESS BAR ─── */
@@ -679,3 +685,374 @@ function initLightbox() {
   });
 }
 
+
+
+/* ==========================================================================
+   INTERACTIVE SUITE FUNCTIONS (Instagram Reel Inspired Micro-Interactions)
+   ========================================================================== */
+
+/* ─── INTERACTIVE HERO CANVAS (CONSTELLATION & MOUSE GLOW) ─── */
+function initHeroCanvas() {
+  const canvas = document.getElementById('heroCanvas');
+  const hero = document.getElementById('hero');
+  if (!canvas || !hero) return;
+
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let particles = [];
+  let mouse = { x: null, y: null, radius: 130 };
+  let isHeroVisible = true;
+
+  function resize() {
+    width = canvas.width = hero.offsetWidth;
+    height = canvas.height = hero.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Touch support for mobile interaction
+  hero.addEventListener('touchmove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    if (e.touches.length > 0) {
+      mouse.x = e.touches[0].clientX - rect.left;
+      mouse.y = e.touches[0].clientY - rect.top;
+    }
+  }, { passive: true });
+  hero.addEventListener('touchend', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  // Optimization: Intersection Observer to pause when scrolled out of view
+  const io = new IntersectionObserver((entries) => {
+    isHeroVisible = entries[0].isIntersecting;
+  }, { threshold: 0.05 });
+  io.observe(hero);
+
+  const particleCount = Math.min(Math.floor((width * height) / 18000), 55);
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 0.7;
+      this.vy = (Math.random() - 0.5) * 0.7;
+      this.radius = Math.random() * 2 + 1.2;
+      this.color = Math.random() > 0.4 ? 'rgba(232, 93, 140, ' : 'rgba(27, 45, 66, ';
+      this.alpha = Math.random() * 0.4 + 0.2;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.x < 0 || this.x > width) this.vx *= -1;
+      if (this.y < 0 || this.y > height) this.vy *= -1;
+
+      // Mouse repulsion & attraction
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          const angle = Math.atan2(dy, dx);
+          this.x -= Math.cos(angle) * force * 2.2;
+          this.y -= Math.sin(angle) * force * 2.2;
+        }
+      }
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color + this.alpha + ')';
+      ctx.fill();
+    }
+  }
+
+  particles = [];
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+
+  function render() {
+    if (isHeroVisible) {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw subtle mouse halo
+      if (mouse.x !== null && mouse.y !== null) {
+        const grad = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, mouse.radius * 1.2);
+        grad.addColorStop(0, 'rgba(232, 93, 140, 0.12)');
+        grad.addColorStop(0.5, 'rgba(232, 93, 140, 0.04)');
+        grad.addColorStop(1, 'rgba(232, 93, 140, 0)');
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(mouse.x, mouse.y, mouse.radius * 1.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Draw connecting lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 110) {
+            const alpha = (1 - dist / 110) * 0.22;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(232, 93, 140, ${alpha})`;
+            ctx.lineWidth = 0.9;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw connections to mouse
+      if (mouse.x !== null && mouse.y !== null) {
+        for (let i = 0; i < particles.length; i++) {
+          const dx = mouse.x - particles[i].x;
+          const dy = mouse.y - particles[i].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < mouse.radius) {
+            const alpha = (1 - dist / mouse.radius) * 0.35;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(232, 93, 140, ${alpha})`;
+            ctx.lineWidth = 1.1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Update & draw particles
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+    }
+
+    requestAnimationFrame(render);
+  }
+  render();
+}
+
+/* ─── 3D INTERACTIVE TILT EFFECT & DYNAMIC GLARE ─── */
+function initInteractiveTilt() {
+  const cards = document.querySelectorAll('.interactive-tilt');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    // Ensure card-glare element exists
+    let glare = card.querySelector('.card-glare');
+    if (!glare) {
+      glare = document.createElement('div');
+      glare.className = 'card-glare';
+      card.prepend(glare);
+    }
+
+    const maxTilt = parseFloat(card.dataset.tiltMax || 8);
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width; // 0 to 1
+      const y = (e.clientY - rect.top) / rect.height; // 0 to 1
+
+      const tiltX = (0.5 - y) * (maxTilt * 2);
+      const tiltY = (x - 0.5) * (maxTilt * 2);
+
+      card.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) scale3d(1.018, 1.018, 1.018)`;
+
+      if (glare) {
+        glare.style.opacity = '1';
+        glare.style.background = `radial-gradient(circle at ${(x * 100).toFixed(1)}% ${(y * 100).toFixed(1)}%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 65%)`;
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      if (glare) glare.style.opacity = '0';
+    });
+  });
+}
+
+/* ─── MAGNETIC BUTTONS & BADGES ─── */
+function initMagnetic() {
+  const targets = document.querySelectorAll('.btn-primary-rose, .btn-secondary-rose, .filter-btn, .badge-tech');
+  targets.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const bx = (e.clientX - rect.left - rect.width / 2) * 0.22;
+      const by = (e.clientY - rect.top - rect.height / 2) * 0.22;
+      el.style.transform = `translate(${bx.toFixed(1)}px, ${by.toFixed(1)}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = 'translate(0px, 0px)';
+    });
+  });
+}
+
+/* ─── WEB AUDIO API SOUND MICRO-INTERACTIONS ─── */
+let audioCtx = null;
+let soundEnabled = true;
+
+function getAudioContext() {
+  if (!audioCtx) {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (AudioContext) audioCtx = new AudioContext();
+  }
+  if (audioCtx && audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  return audioCtx;
+}
+
+function playPopSound(freq = 900, type = 'sine', duration = 0.04) {
+  if (!soundEnabled) return;
+  try {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(freq * 0.5, ctx.currentTime + duration);
+
+    gain.gain.setValueAtTime(0.08, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+  } catch (err) {}
+}
+
+function playSuccessChime() {
+  if (!soundEnabled) return;
+  try {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+    [523.25, 659.25, 783.99].forEach((freq, idx) => {
+      setTimeout(() => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.07, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.12);
+      }, idx * 60);
+    });
+  } catch (err) {}
+}
+
+function initSoundFeedback() {
+  // Load saved preference
+  const saved = localStorage.getItem('sugiati_portfolio_sound');
+  if (saved !== null) soundEnabled = saved === 'true';
+
+  const toggleBtn = document.getElementById('soundToggleBtn');
+  const soundIcon = document.getElementById('soundIcon');
+
+  function updateSoundUI() {
+    if (!toggleBtn) return;
+    if (soundEnabled) {
+      toggleBtn.classList.remove('opacity-50', 'bg-slate-100', 'text-slate-400');
+      toggleBtn.classList.add('bg-rose-50', 'text-rose');
+      toggleBtn.setAttribute('title', 'Suara Aktif (Klik untuk Membisukan)');
+      if (soundIcon) soundIcon.setAttribute('data-lucide', 'volume-2');
+    } else {
+      toggleBtn.classList.add('opacity-50', 'bg-slate-100', 'text-slate-400');
+      toggleBtn.classList.remove('bg-rose-50', 'text-rose');
+      toggleBtn.setAttribute('title', 'Suara Nonaktif (Klik untuk Mengaktifkan)');
+      if (soundIcon) soundIcon.setAttribute('data-lucide', 'volume-x');
+    }
+    if (window.lucide) lucide.createIcons();
+  }
+  updateSoundUI();
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      soundEnabled = !soundEnabled;
+      localStorage.setItem('sugiati_portfolio_sound', soundEnabled);
+      updateSoundUI();
+      if (soundEnabled) playPopSound(1100, 'sine', 0.05);
+    });
+  }
+
+  // Bind pleasant clicks to interactive elements
+  document.querySelectorAll('button, a, .filter-btn, .badge-tech, .slider-slide').forEach(el => {
+    el.addEventListener('click', () => {
+      playPopSound(980, 'sine', 0.035);
+    });
+  });
+
+  // Salin email / copy buttons trigger chime
+  document.querySelectorAll('[data-copy], .copy-email-btn').forEach(el => {
+    el.addEventListener('click', () => playSuccessChime());
+  });
+}
+
+/* ─── CLICK RIPPLE ANIMATION ─── */
+function initClickRipple() {
+  document.addEventListener('pointerdown', (e) => {
+    const ripple = document.createElement('span');
+    ripple.className = 'click-ripple';
+    ripple.style.left = e.clientX + 'px';
+    ripple.style.top = e.clientY + 'px';
+    ripple.style.width = '70px';
+    ripple.style.height = '70px';
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+}
+
+/* ─── SCROLL DOCK & CIRCULAR PROGRESS ─── */
+function initScrollDock() {
+  const dock = document.getElementById('interactiveDock');
+  const circle = document.getElementById('scrollProgressCircle');
+  const btn = document.getElementById('backToTopProgress');
+
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const maxScroll = h.scrollHeight - h.clientHeight;
+    const progress = maxScroll > 0 ? (h.scrollTop / maxScroll) : 0;
+
+    if (circle) {
+      const offset = 100 - (progress * 100);
+      circle.style.strokeDashoffset = Math.max(0, Math.min(100, offset));
+    }
+  });
+
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      playPopSound(1200, 'sine', 0.05);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
