@@ -797,7 +797,7 @@ function initHeroCanvas() {
       this.vx = (Math.random() - 0.5) * 0.7;
       this.vy = (Math.random() - 0.5) * 0.7;
       this.radius = Math.random() * 2 + 1.2;
-      this.color = Math.random() > 0.5 ? 'rgba(224, 163, 178, ' : (Math.random() > 0.3 ? 'rgba(199, 210, 254, ' : 'rgba(255, 255, 255, ');
+      this.color = Math.random() > 0.4 ? 'rgba(232, 93, 140, ' : 'rgba(27, 45, 66, ';
       this.alpha = Math.random() * 0.4 + 0.2;
     }
 
@@ -862,7 +862,7 @@ function initHeroCanvas() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(224, 163, 178, ${alpha})`;
+            ctx.strokeStyle = `rgba(232, 93, 140, ${alpha})`;
             ctx.lineWidth = 0.9;
             ctx.stroke();
           }
@@ -880,7 +880,7 @@ function initHeroCanvas() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(224, 163, 178, ${alpha})`;
+            ctx.strokeStyle = `rgba(232, 93, 140, ${alpha})`;
             ctx.lineWidth = 1.1;
             ctx.stroke();
           }
