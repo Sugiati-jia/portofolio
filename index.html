@@ -36,6 +36,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-hero.css">
   <link rel="icon" type="image/svg+xml" href="assets/sugiati-avatar.svg">
 </head>
 <body class="bg-cream text-slate-800 antialiased selection:bg-rose selection:text-white relative overflow-x-hidden min-h-screen">
@@ -54,14 +55,14 @@
        NAVBAR
        ========================================================================= -->
   <header class="fixed top-4 sm:top-5 left-0 right-0 z-40 px-3 sm:px-8 max-w-7xl mx-auto">
-    <nav id="navbar" class="glass-nav rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
+    <nav id="navbar" class="glass-nav hero-nav rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
 
       <!-- Brand -->
       <a href="#hero" class="flex items-center gap-2.5 group">
         <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black overflow-hidden shadow-md group-hover:scale-105 transition-transform border-2 border-rose-400/60 flex-shrink-0"><img src="assets/sugiati-photo.jpg" alt="Sugiati (Jia)" class="w-full h-full object-cover object-top"></div>
         <div>
-          <span class="font-serif font-bold text-base text-slate-900 group-hover:text-rose transition-colors">Sugiati <span class="text-rose font-sans text-xs font-semibold px-2 py-0.5 bg-rose-50 rounded-full ml-1 border border-rose-200">Jia</span></span>
-          <p class="text-[9px] sm:text-[10px] tracking-wider uppercase font-semibold text-slate-500">Web Developer &amp; System Analyst</p>
+          <span class="nav-brand-name font-serif font-bold text-base text-slate-900 group-hover:text-rose transition-colors">Sugiati <span class="text-rose font-sans text-xs font-semibold px-2 py-0.5 bg-rose-50/20 rounded-full ml-1 border border-rose-400/40">Jia</span></span>
+          <p class="nav-brand-sub text-[9px] sm:text-[10px] tracking-wider uppercase font-semibold text-slate-500">Web Developer &amp; System Analyst</p>
         </div>
       </a>
 
@@ -115,130 +116,146 @@
     <!-- =========================================================================
          SECTION 1: HERO SECTION
          ========================================================================= -->
-        <section id="hero" class="relative min-h-[85vh] flex items-center py-12 lg:py-20 bg-tech-grid overflow-hidden">
-      <!-- Interactive Dynamic Particle Canvas (Constellation & Mouse Glow) -->
-      <canvas id="heroCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- ═══════════════════════════════════════════
+             HERO: DARK CINEMATIC EDITORIAL
+             ═══════════════════════════════════════════ -->
+        <section id="hero" class="hero-dark relative min-h-screen flex items-center overflow-hidden">
+          <!-- Animated ambient background blobs -->
+          <div class="hero-blob hero-blob-1"></div>
+          <div class="hero-blob hero-blob-2"></div>
+          <div class="hero-blob hero-blob-3"></div>
 
-          <!-- Text Column -->
-          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <!-- Particle canvas for subtle star effect -->
+          <canvas id="heroCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
-            <!-- Availability Badge -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-slate-200 shadow-xs backdrop-blur-md">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="text-xs font-medium text-slate-700">Tersedia untuk Peluang Karir &amp; Kerjasama Proyek</span>
-            </div>
+          <!-- Noise texture overlay for depth -->
+          <div class="hero-noise"></div>
 
-            <!-- Headline: Direct, Clean & Human -->
-            <div class="space-y-3">
-              <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.15]">
-                Halo, saya Sugiati <span class="text-slate-500 font-normal font-sans text-2xl sm:text-4xl">(Jia)</span>.
-              </h1>
-              <p class="text-lg sm:text-2xl font-bold text-slate-800 tracking-tight flex items-center justify-center lg:justify-start gap-2">
-                <span>System Analyst</span>
-                <span class="text-slate-400 font-light">&amp;</span>
-                <span>Web Developer</span>
-              </p>
-            </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10 py-28 lg:py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
-            <!-- Authentic proposition requested by user -->
-            <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed mx-auto lg:mx-0">
-              Saya membantu mengembangkan solusi digital melalui analisis kebutuhan, perancangan sistem, dan pengembangan website yang fungsional serta mudah digunakan.
-            </p>
+              <!-- ── LEFT: Main Content ── -->
+              <div class="lg:col-span-7 space-y-8">
 
-            <!-- Focus Badges -->
-            <div class="flex flex-wrap gap-2 justify-center lg:justify-start pt-1">
-              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Perancangan Sistem &amp; DFD</span>
-              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Laravel &amp; PHP 8</span>
-              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Basis Data MySQL</span>
-              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Pengelolaan Data &amp; Dokumen</span>
-            </div>
+                <!-- Status badge -->
+                <div class="hero-badge inline-flex items-center gap-2.5 px-4 py-2 rounded-full">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                  </span>
+                  <span class="text-xs font-semibold text-white/80 tracking-wide">Tersedia untuk Peluang Karir &amp; Kolaborasi</span>
+                </div>
 
-            <!-- CTAs -->
-            <div class="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start pt-2">
-              <a href="#projects" class="px-6 sm:px-7 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm flex items-center gap-2 shadow-sm transition-all group">
-                <span>Lihat Proyek Saya</span>
-                <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform text-slate-300"></i>
-              </a>
-              <a href="#contact" class="px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-medium text-xs sm:text-sm flex items-center gap-2 shadow-xs transition-all group">
-                <i data-lucide="mail" class="w-4 h-4 text-slate-500 group-hover:text-slate-900 transition-colors"></i>
-                <span>Hubungi Saya</span>
-              </a>
-            </div>
+                <!-- Main headline -->
+                <div class="space-y-4">
+                  <p class="hero-eyebrow text-xs sm:text-sm font-mono font-semibold tracking-[0.2em] uppercase">System Analyst &amp; Web Developer</p>
+                  <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+                    Halo, saya<br>
+                    <span class="hero-name-gradient">Sugiati</span>
+                    <span class="font-sans font-light text-white/40 text-3xl sm:text-4xl lg:text-5xl italic"> (Jia).</span>
+                  </h1>
+                  <p class="text-base sm:text-xl text-white/60 max-w-xl leading-relaxed font-light">
+                    Saya membantu mengembangkan solusi digital melalui analisis kebutuhan, perancangan sistem, dan pengembangan website yang fungsional serta mudah digunakan.
+                  </p>
+                </div>
 
-            <!-- Hidden element for main.js compatibility -->
-            <span id="typingText" class="hidden"></span>
+                <!-- Hidden element for main.js compatibility -->
+                <span id="typingText" class="hidden"></span>
 
-            <!-- Minimalist Editorial Stats -->
-            <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
-              <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/80 shadow-2xs">
-                <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="3.80" data-decimal="true">0</p>
-                <p class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">IPK Akademik / 4.00</p>
+                <!-- Skill chips -->
+                <div class="flex flex-wrap gap-2">
+                  <span class="hero-chip">Perancangan Sistem &amp; DFD</span>
+                  <span class="hero-chip">Laravel &amp; PHP 8</span>
+                  <span class="hero-chip">Basis Data MySQL</span>
+                  <span class="hero-chip">PWA &amp; Bootstrap</span>
+                  <span class="hero-chip">Pengelolaan Data</span>
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-wrap gap-4">
+                  <a href="#projects" class="hero-cta-primary group">
+                    <span>Lihat Proyek Saya</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                  </a>
+                  <a href="#contact" class="hero-cta-ghost group">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span>Hubungi Saya</span>
+                  </a>
+                </div>
+
+                <!-- Stats row -->
+                <div class="hero-stats grid grid-cols-3 gap-4 max-w-lg pt-2">
+                  <div class="hero-stat-item text-center lg:text-left">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-white counter-animate" data-target="3.80" data-decimal="true">0</p>
+                    <p class="text-[11px] text-white/45 font-medium mt-1 leading-tight">IPK Akademik<br>/ 4.00</p>
+                  </div>
+                  <div class="hero-stat-item text-center lg:text-left">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-white counter-animate" data-target="4" data-suffix="">0</p>
+                    <p class="text-[11px] text-white/45 font-medium mt-1 leading-tight">Studi Kasus<br>Diselesaikan</p>
+                  </div>
+                  <div class="hero-stat-item text-center lg:text-left">
+                    <p class="font-serif text-3xl sm:text-4xl font-bold text-white counter-animate" data-target="3" data-suffix="">0</p>
+                    <p class="text-[11px] text-white/45 font-medium mt-1 leading-tight">Pengalaman<br>Lapangan</p>
+                  </div>
+                </div>
+
               </div>
-              <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/80 shadow-2xs">
-                <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="4" data-suffix="">0</p>
-                <p class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Studi Kasus Selesai</p>
-              </div>
-              <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/80 shadow-2xs">
-                <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="3" data-suffix="">0</p>
-                <p class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Pengalaman Lapangan</p>
-              </div>
-            </div>
 
+              <!-- ── RIGHT: Profile Card (Glassmorphism Dark) ── -->
+              <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="hero-profile-card relative w-full max-w-xs sm:max-w-sm interactive-tilt" data-tilt-max="8">
+                  <div class="card-glare"></div>
+
+                  <!-- Card window chrome -->
+                  <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-3 h-3 rounded-full bg-red-400/80"></span>
+                      <span class="w-3 h-3 rounded-full bg-yellow-400/80"></span>
+                      <span class="w-3 h-3 rounded-full bg-green-400/80"></span>
+                    </div>
+                    <span class="text-[10px] font-mono text-white/30 tracking-widest uppercase">Profile.jsx</span>
+                  </div>
+
+                  <!-- Photo -->
+                  <div class="relative mb-5 flex justify-center">
+                    <div class="hero-photo-ring">
+                      <img src="assets/sugiati-photo.jpg" alt="Sugiati (Jia)" class="w-full h-full object-cover object-top">
+                    </div>
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-white text-[9px] font-bold px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                      Aktif
+                    </div>
+                  </div>
+
+                  <!-- Name & title -->
+                  <div class="text-center mb-5">
+                    <h3 class="text-white font-serif font-bold text-xl">Sugiati <span class="text-white/40 font-sans font-light text-sm">(Jia)</span></h3>
+                    <p class="text-white/50 text-xs mt-1">S1 Teknologi Informasi &bull; Universitas Nurul Jadid</p>
+                  </div>
+
+                  <!-- Skills grid -->
+                  <div class="border-t border-white/10 pt-4">
+                    <p class="text-[9px] font-mono font-semibold text-white/30 uppercase tracking-widest mb-3 text-center">Core Competencies</p>
+                    <div class="flex flex-wrap gap-1.5 justify-center">
+                      <span class="hero-skill-chip">System Analysis</span>
+                      <span class="hero-skill-chip">Laravel &amp; PHP</span>
+                      <span class="hero-skill-chip">MySQL</span>
+                      <span class="hero-skill-chip">Flowchart &amp; DFD</span>
+                      <span class="hero-skill-chip">Figma</span>
+                      <span class="hero-skill-chip">Draw.io</span>
+                      <span class="hero-skill-chip">PWA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <!-- Hero Visual Column: Refined Editorial Profile Card -->
-          <div class="lg:col-span-5 relative flex justify-center">
-            <div class="relative w-full max-w-sm sm:max-w-md">
-
-              <!-- Clean Editorial Card -->
-              <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-200/90 relative interactive-tilt" data-tilt-max="7">
-                <div class="card-glare"></div>
-
-                <!-- Card Header -->
-                <div class="flex items-center justify-between pb-3.5 border-b border-slate-100">
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
-                  </div>
-                  <span class="text-[11px] font-mono font-medium text-slate-500 tracking-wider uppercase">Profile Overview</span>
-                </div>
-
-                <!-- Profile Photo with Clean Framing -->
-                <div class="relative my-5 flex justify-center">
-                  <div class="w-48 h-48 sm:w-52 sm:h-52 rounded-2xl overflow-hidden bg-slate-900 shadow-md border-2 border-slate-200 relative">
-                    <img src="assets/sugiati-photo.jpg" alt="Sugiati (Jia)" class="w-full h-full object-cover object-top">
-                  </div>
-                </div>
-
-                <!-- Credentials Info -->
-                <div class="text-center space-y-1">
-                  <h3 class="font-serif font-bold text-xl text-slate-900">Sugiati <span class="font-sans font-normal text-slate-500 text-sm">(Jia)</span></h3>
-                  <p class="text-xs font-medium text-slate-600">S1 Teknologi Informasi &bull; Universitas Nurul Jadid</p>
-                </div>
-
-                <!-- Competencies Snapshot -->
-                <div class="mt-5 pt-4 border-t border-slate-100">
-                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2.5 text-center">Kompetensi Utama Teruji:</p>
-                  <div class="flex flex-wrap gap-1.5 justify-center">
-                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">System Analysis</span>
-                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Laravel &amp; PHP</span>
-                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Basis Data MySQL</span>
-                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Flowchart &amp; DFD</span>
-                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Pengelolaan Data &amp; Dokumen</span>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+          <!-- Bottom fade to body -->
+          <div class="hero-bottom-fade"></div>
+        </section>
 
 
         <section id="about" class="py-20 lg:py-28 relative">
