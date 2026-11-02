@@ -485,104 +485,257 @@
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 1: SIAKAD (FULL EDGE-TO-EDGE IMAGE HEADER)
                ═════════════════════════════════════════════════════════════════ -->
-          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal flex flex-col justify-between interactive-tilt" data-category="webdev" data-tilt-max="7"><div class="card-glare"></div>
-            <div>
-              <!-- Full-bleed Slider Container (No black margin, full card width) -->
-              <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-rose-100">
-                <div class="slider-container w-full h-full" data-slider>
-                  <div class="slider-track flex h-full">
-                    
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot1.png" data-caption="SIAKAD - Dashboard Administrator SMK Swasta Sunan Giri">
-                      <img src="assets/siakad/screenshot1.png" alt="SIAKAD - Dashboard Admin" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Dashboard Administrator</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
-                      </div>
-                    </div>
+          <!-- SIAKAD — Full-width hero card (spans both columns) -->
+          <div class="md:col-span-2 project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal flex flex-col interactive-tilt" data-category="webdev" data-tilt-max="5">
+            <div class="card-glare"></div>
 
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot2.png" data-caption="SIAKAD - Modul Pengelolaan Data Guru &amp; Penilaian">
-                      <img src="assets/siakad/screenshot2.png" alt="SIAKAD - Manajemen Guru &amp; Nilai" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Manajemen Guru &amp; Nilai</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
-                      </div>
-                    </div>
+            <!-- ── TOP: Screenshot Slider (full width, tall) ───────────────────── -->
+            <div class="relative w-full h-80 sm:h-96 overflow-hidden bg-slate-900 border-b border-rose-100">
+              <div class="slider-container w-full h-full" data-slider>
+                <div class="slider-track flex h-full">
 
-                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot3.png" data-caption="SIAKAD - Pengelolaan Rapor Siswa Per Kelas">
-                      <img src="assets/siakad/screenshot3.png" alt="SIAKAD - Pengelolaan Rapor Kelas" class="w-full h-full object-cover object-top">
-                      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
-                        <span class="text-white text-xs font-semibold drop-shadow">Pengelolaan Rapor Kelas</span>
-                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
-                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full
-                        </span>
+                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot1.png" data-caption="SIAKAD — Dashboard Admin: ringkasan statistik real-time siswa, guru, kelas & status nilai">
+                    <img src="assets/siakad/screenshot1.png" alt="Dashboard Admin SIAKAD" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-5">
+                      <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-rose-300 bg-rose-900/60 px-2 py-0.5 rounded-full">Admin</span>
+                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Dashboard Utama Administrator</p>
                       </div>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
                     </div>
-
                   </div>
 
-                  <!-- Controls -->
-                  <button class="slider-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Foto Sebelumnya"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
-                  <button class="slider-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Foto Selanjutnya"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
-                  <div class="slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"></div>
-                </div>
+                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot2.png" data-caption="SIAKAD — Modul Input Nilai Guru: input nilai per tujuan pembelajaran (TP) berbasis Kurikulum Merdeka">
+                    <img src="assets/siakad/screenshot2.png" alt="Modul Input Nilai Guru" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-5">
+                      <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300 bg-emerald-900/60 px-2 py-0.5 rounded-full">Guru</span>
+                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Input Nilai Per Tujuan Pembelajaran</p>
+                      </div>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
+                    </div>
+                  </div>
 
-                <!-- Top Badge -->
-                <div class="absolute top-4 left-4 bg-rose text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20">
-                  Studi Kasus Utama
+                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot3.png" data-caption="SIAKAD — Rapor Digital: laporan nilai siswa per semester, ekspor PDF & unduh ZIP seluruh kelas">
+                    <img src="assets/siakad/screenshot3.png" alt="E-Rapor Digital SIAKAD" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-5">
+                      <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-900/60 px-2 py-0.5 rounded-full">Wali Kelas</span>
+                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">E-Rapor Digital: PDF & ZIP Batch</p>
+                      </div>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 – 6: placeholder screenshot tambahan (ganti dengan ss asli) -->
+                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot1.png" data-caption="SIAKAD — Portal Orang Tua dengan PWA: instalasi 1-klik, notifikasi push Firebase">
+                    <img src="assets/siakad/screenshot1.png" alt="Portal Orang Tua PWA" class="w-full h-full object-cover object-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end justify-between p-5">
+                      <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-sky-300 bg-sky-900/60 px-2 py-0.5 rounded-full">Orang Tua / PWA</span>
+                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Portal Orang Tua + Install PWA 1-Klik</p>
+                      </div>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
+                    </div>
+                  </div>
+
+                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot2.png" data-caption="SIAKAD — Leger Nilai: rekap nilai semua mapel seluruh siswa, export Excel & PDF">
+                    <img src="assets/siakad/screenshot2.png" alt="Leger Nilai SIAKAD" class="w-full h-full object-cover object-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end justify-between p-5">
+                      <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-900/60 px-2 py-0.5 rounded-full">Wali Kelas</span>
+                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Leger Nilai: Export Excel & PDF</p>
+                      </div>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
+                    </div>
+                  </div>
+
+                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot3.png" data-caption="SIAKAD — Ranking Siswa & Notifikasi Push Firebase: peringkat otomatis & push notification real-time">
+                    <img src="assets/siakad/screenshot3.png" alt="Ranking & Notifikasi SIAKAD" class="w-full h-full object-cover object-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end justify-between p-5">
+                      <div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-rose-300 bg-rose-900/60 px-2 py-0.5 rounded-full">Sistem</span>
+                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Ranking Otomatis & Push Notification</p>
+                      </div>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
+                    </div>
+                  </div>
+
                 </div>
+                <!-- Slider Controls -->
+                <button class="slider-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Sebelumnya"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+                <button class="slider-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Selanjutnya"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+                <div class="slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"></div>
               </div>
-
-              <!-- Content -->
-              <div class="p-6 sm:p-8 space-y-4">
-                <div class="flex items-center gap-2 text-xs font-semibold text-rose">
-                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-                  <span>Pengembangan Sistem Informasi Akademik &amp; PWA</span>
-                </div>
-                
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-rose transition-colors">
-                  SIAKAD &mdash; Sistem Informasi Akademik (SMK Swasta Sunan Giri)
-                </h3>
-                
-                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                  Menganalisis kebutuhan dan merancang sistem informasi akademik untuk mengintegrasikan data siswa, guru, kelas, mata pelajaran, dan penilaian dalam satu platform terpusat. Mengembangkan aplikasi berbasis <strong>Laravel, PHP, MySQL, dan Bootstrap</strong> dengan modul penilaian otomatis serta pengelolaan rapor digital untuk mengeliminasi input data berulang. Dilengkapi dukungan <strong>Progressive Web App (PWA)</strong> yang dioptimasi untuk kenyamanan akses pada perangkat mobile pengguna serta fitur notifikasi. Melakukan perancangan database, dokumentasi sistem (Flowchart dan DFD), serta pengujian menggunakan <strong>Black Box Testing</strong>.
-                </p>
-
-                <!-- Framework / Tool Logos -->
-                <div class="pt-2 border-t border-slate-100">
-                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Aplikasi &amp; Framework yang Digunakan:</p>
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-red-50 text-red-700 border border-red-200 shadow-xs">
-                      <svg class="w-3.5 h-3.5 text-[#FF2D20]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.7 6.53c.01.02.01.05.01.08v10.03c0 .93-.51 1.79-1.33 2.24l-8.61 4.98c-.05.03-.1.04-.16.06-.02 0-.04.01-.06.02h-.12c-.03 0-.05-.01-.08-.02-.05-.01-.11-.03-.15-.05L2.62 18.88A2.59 2.59 0 011.29 16.64V6.61c0-.03 0-.06.01-.08 0-.03.01-.05.02-.08.01-.02.02-.05.03-.07.01-.02.02-.04.04-.06l.02-.04c.02-.02.03-.04.05-.06l.05-.05.04-.04c.02-.02.04-.03.07-.04L7.27 2.82a.51.51 0 01.51 0L13.43 6.18l.04.02c.02.02.04.03.06.05l.05.05c.02.02.03.04.05.06l.02.04c.02.02.03.04.04.06.01.02.02.05.03.07.01.03.01.05.02.08 0 .02.01.05.01.08v9.41l3.56-2.06V7.88l-3.55-2.06-3.56 2.06v4.11L7.53 13.99V3.72L4.39 5.56v11.18l8.1 4.68 8.1-4.68V7.35z"/></svg>
-                      Laravel
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 shadow-xs">
-                      <svg class="w-3.5 h-3.5 text-[#777BB4]" viewBox="0 0 24 24" fill="currentColor"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.286.164H5.874l-.448 2.34H4.1l1.443-7.5h2.17c.94 0 1.604.199 1.988.598.385.399.49.97.316 1.713a3.07 3.07 0 01-.394.99c-.187.297-.42.555-.696.771l-.188.373zm5.24-.4h-1.327l.527-2.746h1.327c.586 0 .986.115 1.197.346.21.23.256.609.138 1.137-.121.528-.379.909-.774 1.142-.395.234-.864.35-1.407.35l.32-.23zm5.583-2.759l-.363 1.903h2.203l-.244 1.272h-2.204l-.39 2.033h2.335l-.263 1.38H16.87l1.443-7.5h3.767l-.262 1.378h-2.495l.24-.466z"/></svg>
-                      PHP
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
-                      <svg class="w-3.5 h-3.5 text-[#00758F]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5.37c-3.66 0-6.63 2.97-6.63 6.63s2.97 6.63 6.63 6.63 6.63-2.97 6.63-6.63S15.66 5.37 12 5.37zm0 2.03c2.53 0 4.6 2.07 4.6 4.6s-2.07 4.6-4.6 4.6-4.6-2.07-4.6-4.6 2.07-4.6 4.6-4.6z"/></svg>
-                      MySQL
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 shadow-xs">
-                      <svg class="w-3.5 h-3.5 text-[#7952B3]" viewBox="0 0 24 24" fill="currentColor"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186C2.603 3.636 3.615 2.438 4.985 2.438h14.032c1.37 0 2.382 1.198 2.337 2.498-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268z"/></svg>
-                      Bootstrap
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-xs" title="PWA untuk kenyamanan akses mobile dan notifikasi sistem">
-                      <svg class="w-3.5 h-3.5 text-[#5A0FC8]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-                      PWA (Mobile &amp; Notifikasi)
-                    </span>
-                  </div>
-                </div>
-
-                <p class="text-[10px] text-slate-500 font-mono">SMK Swasta Sunan Giri, Kota Probolinggo &bull; Juni &ndash; Juli 2026</p>
+              <!-- Badge -->
+              <div class="absolute top-4 left-4 bg-rose text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20 flex items-center gap-1.5">
+                <i data-lucide="star" class="w-3 h-3"></i> Proyek Unggulan
+              </div>
+              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-slate-700 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20">
+                Laravel PWA
               </div>
             </div>
-          </div>
 
+            <!-- ── CONTENT ───────────────────────────────────────────────────── -->
+            <div class="p-6 sm:p-8 space-y-6">
+
+              <!-- Title row -->
+              <div>
+                <div class="flex items-center gap-2 text-xs font-semibold text-rose mb-2">
+                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                  <span>Pengembangan Sistem Informasi Akademik &amp; E-Rapor Digital</span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 group-hover:text-rose transition-colors leading-tight">
+                  SIAKAD &amp; E-Rapor — SMK Sunan Giri Probolinggo
+                </h3>
+                <p class="text-[10px] text-slate-500 font-mono mt-1">SMK Swasta Sunan Giri, Kota Probolinggo &bull; Juni &ndash; Agustus 2026</p>
+              </div>
+
+              <!-- Description -->
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Sistem Informasi Akademik berbasis <strong>Laravel 13 + PHP 8.3</strong> yang dikembangkan penuh dari analisis kebutuhan hingga deployment. Menggantikan sistem lama yang manual (Excel) menjadi platform digital terintegrasi dengan <strong>5 role pengguna</strong> (Admin, Guru, Wali Kelas, Siswa, Orang Tua) dan rapor digital yang otomatis digenerate ke <strong>PDF</strong>. Dilengkapi fitur <strong>Progressive Web App (PWA)</strong> berbasis Firebase untuk notifikasi push real-time ke orang tua siswa.
+              </p>
+
+              <!-- ── Two-column: Features + Stats ──────────────────────────── -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                <!-- Feature list (left) -->
+                <div class="space-y-2.5">
+                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Fitur Utama Sistem:</p>
+                  <ul class="space-y-1.5 text-xs text-slate-700">
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Dashboard real-time</strong> per role: statistik siswa, guru, nilai &amp; absensi</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Input nilai berbasis TP</strong> (Tujuan Pembelajaran) sesuai Kurikulum Merdeka</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>E-Rapor PDF otomatis</strong> + ZIP batch download seluruh kelas</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Leger nilai</strong> per kelas: export Excel &amp; PDF untuk arsip sekolah</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Manajemen master data</strong>: Guru, Siswa, Kelas, Mapel, Jadwal, Ekstrakurikuler</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Import massal</strong> data Guru &amp; Siswa via Excel (Maatwebsite)</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>PWA + Push Notification</strong> Firebase: orang tua notif nilai terbaru</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Lupa password via OTP</strong> email, reset password aman</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Ranking siswa otomatis</strong> per semester berdasarkan rata-rata nilai akhir</span></li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Log aktivitas &amp; log error</strong> sistem terekam otomatis</span></li>
+                  </ul>
+                </div>
+
+                <!-- Stats (right) -->
+                <div class="space-y-3">
+                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Statistik Proyek:</p>
+                  <div class="grid grid-cols-2 gap-2.5">
+                    <div class="bg-rose-50 border border-rose-100 rounded-2xl p-3 text-center">
+                      <div class="text-2xl font-bold text-rose font-serif">5</div>
+                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Role Pengguna</div>
+                    </div>
+                    <div class="bg-navy/5 border border-navy/10 rounded-2xl p-3 text-center">
+                      <div class="text-2xl font-bold text-navy font-serif">15+</div>
+                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Tabel Database</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-3 text-center">
+                      <div class="text-2xl font-bold text-emerald-600 font-serif">100+</div>
+                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Route / Halaman</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 rounded-2xl p-3 text-center">
+                      <div class="text-2xl font-bold text-amber-600 font-serif">PDF</div>
+                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Rapor Otomatis</div>
+                    </div>
+                    <div class="bg-purple-50 border border-purple-100 rounded-2xl p-3 text-center">
+                      <div class="text-2xl font-bold text-purple-600 font-serif">PWA</div>
+                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Install di HP/PC</div>
+                    </div>
+                    <div class="bg-sky-50 border border-sky-100 rounded-2xl p-3 text-center">
+                      <div class="text-2xl font-bold text-sky-600 font-serif">FCM</div>
+                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Push Notifikasi</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Role Architecture chips ─────────────────────────────────── -->
+              <div class="border-t border-slate-100 pt-4">
+                <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2.5">Arsitektur Role Pengguna:</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-rose-100 text-rose-700 border border-rose-200">
+                    <i data-lucide="shield" class="w-3 h-3"></i> Admin — Master Data &amp; Konfigurasi
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-200">
+                    <i data-lucide="book-open" class="w-3 h-3"></i> Guru — Input Nilai &amp; TP
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-700 border border-purple-200">
+                    <i data-lucide="clipboard-list" class="w-3 h-3"></i> Wali Kelas — Rapor &amp; Leger
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-navy/10 text-navy border border-navy/20">
+                    <i data-lucide="user" class="w-3 h-3"></i> Siswa — Nilai &amp; E-Rapor
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-700 border border-sky-200">
+                    <i data-lucide="smartphone" class="w-3 h-3"></i> Orang Tua — PWA &amp; Notifikasi
+                  </span>
+                </div>
+              </div>
+
+              <!-- ── Tech Stack ─────────────────────────────────────────────── -->
+              <div class="border-t border-slate-100 pt-4">
+                <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2.5">Tech Stack &amp; Pustaka:</p>
+                <div class="flex flex-wrap gap-2 items-center">
+                  <!-- Laravel -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-red-50 text-red-700 border border-red-200">
+                    <svg class="w-3.5 h-3.5 text-[#FF2D20]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.7 6.53c.01.02.01.05.01.08v10.03c0 .93-.51 1.79-1.33 2.24l-8.61 4.98c-.05.03-.1.04-.16.06-.02 0-.04.01-.06.02h-.12c-.03 0-.05-.01-.08-.02-.05-.01-.11-.03-.15-.05L2.62 18.88A2.59 2.59 0 011.29 16.64V6.61c0-.03 0-.06.01-.08 0-.03.01-.05.02-.08.01-.02.02-.05.03-.07.01-.02.02-.04.04-.06l.02-.04c.02-.02.03-.04.05-.06l.05-.05.04-.04c.02-.02.04-.03.07-.04L7.27 2.82a.51.51 0 01.51 0L13.43 6.18l.04.02c.02.02.04.03.06.05l.05.05c.02.02.03.04.05.06l.02.04c.02.02.03.04.04.06.01.02.02.05.03.07.01.03.01.05.02.08 0 .02.01.05.01.08v9.41l3.56-2.06V7.88l-3.55-2.06-3.56 2.06v4.11L7.53 13.99V3.72L4.39 5.56v11.18l8.1 4.68 8.1-4.68V7.35z"/></svg>
+                    Laravel 13
+                  </span>
+                  <!-- PHP -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+                    <svg class="w-3.5 h-3.5 text-[#777BB4]" viewBox="0 0 24 24" fill="currentColor"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.286.164H5.874l-.448 2.34H4.1l1.443-7.5h2.17c.94 0 1.604.199 1.988.598.385.399.49.97.316 1.713a3.07 3.07 0 01-.394.99c-.187.297-.42.555-.696.771l-.188.373zm5.24-.4h-1.327l.527-2.746h1.327c.586 0 .986.115 1.197.346.21.23.256.609.138 1.137-.121.528-.379.909-.774 1.142-.395.234-.864.35-1.407.35l.32-.23zm5.583-2.759l-.363 1.903h2.203l-.244 1.272h-2.204l-.39 2.033h2.335l-.263 1.38H16.87l1.443-7.5h3.767l-.262 1.378h-2.495l.24-.466z"/></svg>
+                    PHP 8.3
+                  </span>
+                  <!-- MySQL -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                    <svg class="w-3.5 h-3.5 text-[#00758F]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5.37c-3.66 0-6.63 2.97-6.63 6.63s2.97 6.63 6.63 6.63 6.63-2.97 6.63-6.63S15.66 5.37 12 5.37zm0 2.03c2.53 0 4.6 2.07 4.6 4.6s-2.07 4.6-4.6 4.6-4.6-2.07-4.6-4.6 2.07-4.6 4.6-4.6z"/></svg>
+                    MySQL
+                  </span>
+                  <!-- Bootstrap -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+                    <svg class="w-3.5 h-3.5 text-[#7952B3]" viewBox="0 0 24 24" fill="currentColor"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186C2.603 3.636 3.615 2.438 4.985 2.438h14.032c1.37 0 2.382 1.198 2.337 2.498-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268z"/></svg>
+                    Bootstrap 5
+                  </span>
+                  <!-- PWA -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> PWA
+                  </span>
+                  <!-- Firebase -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                    <svg class="w-3.5 h-3.5 text-[#FFCA28]" viewBox="0 0 24 24" fill="currentColor"><path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.972-14.97a.539.539 0 00-.548-.428.52.52 0 00-.44.30l-11.99 14.97 6.975 3.911a1.454 1.454 0 001.387 0zm-10.27-5.708l1.361-12.02.741 12.02z"/></svg>
+                    Firebase FCM
+                  </span>
+                  <!-- DomPDF -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> DomPDF &amp; mPDF
+                  </span>
+                  <!-- Excel -->
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-green-50 text-green-700 border border-green-200">
+                    <i data-lucide="table" class="w-3.5 h-3.5"></i> Maatwebsite Excel
+                  </span>
+                </div>
+              </div>
+
+              <!-- ── Pengujian & Metodologi ─────────────────────────────────── -->
+              <div class="border-t border-slate-100 pt-4 flex flex-wrap gap-3">
+                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
+                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                  <span><strong>Black Box Testing</strong> — uji fungsionalitas semua modul</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
+                  <i data-lucide="git-branch" class="w-3.5 h-3.5 text-rose"></i>
+                  <span><strong>Flowchart &amp; DFD</strong> — perancangan alur sistem</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
+                  <i data-lucide="database" class="w-3.5 h-3.5 text-blue-500"></i>
+                  <span><strong>ERD &amp; CDM</strong> — desain database relasional</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
+                  <i data-lucide="book" class="w-3.5 h-3.5 text-purple-500"></i>
+                  <span><strong>Kurikulum Merdeka</strong> — standar penilaian berbasis TP</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
           <!-- ═════════════════════════════════════════════════════════════════
                PROYEK 2: LAUNDRY VOUCHER (FULL EDGE-TO-EDGE IMAGE HEADER)
