@@ -13,12 +13,12 @@
       theme: {
         extend: {
           colors: {
-            navy: '#0d1b2a',
-            'navy-mid': '#1b2d42',
-            rose: '#e85d8c',
-            'rose-light': '#f4a3c0',
-            cream: '#fff9f5',
-            gold: '#d4a855',
+            navy: '#0f172a',
+            'navy-mid': '#1e293b',
+            rose: '#9e4a5d',
+            'rose-light': '#d9b6c0',
+            cream: '#faf9f6',
+            gold: '#c29342',
           },
           fontFamily: {
             serif: ['Playfair Display', 'Georgia', 'serif'],
@@ -47,9 +47,8 @@
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-  <!-- Ambient Glow Orbs -->
-  <div class="fixed top-0 left-1/4 w-96 h-96 bg-rose-200/30 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-glow"></div>
-  <div class="fixed bottom-1/3 right-10 w-[30rem] h-[30rem] bg-pink-100/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <!-- Subtle Minimal Ambient Warmth -->
+  <div class="fixed top-0 left-1/3 w-[36rem] h-[36rem] bg-amber-50/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
   <!-- =========================================================================
        NAVBAR
@@ -116,163 +115,122 @@
     <!-- =========================================================================
          SECTION 1: HERO SECTION
          ========================================================================= -->
-    <section id="hero" class="relative min-h-[90vh] flex items-center py-12 lg:py-20 bg-tech-grid overflow-hidden">
+        <section id="hero" class="relative min-h-[85vh] flex items-center py-12 lg:py-20 bg-tech-grid overflow-hidden">
       <!-- Interactive Dynamic Particle Canvas (Constellation & Mouse Glow) -->
       <canvas id="heroCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
       <div class="max-w-7xl mx-auto px-4 sm:px-8 w-full relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
           <!-- Text Column -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
 
             <!-- Availability Badge -->
-            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/85 border border-rose-200 shadow-sm backdrop-blur-md">
-              <span class="relative flex h-2.5 w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-              </span>
-              <span class="text-xs font-semibold tracking-wide text-slate-700">Tersedia untuk Posisi Web Developer &amp; System Analyst</span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-slate-200 shadow-xs backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-xs font-medium text-slate-700">Tersedia untuk Peluang Karir &amp; Kerjasama Proyek</span>
             </div>
 
-            <!-- Headline -->
-            <div class="space-y-2">
-              <p class="font-cormorant italic text-xl sm:text-2xl text-rose font-semibold tracking-wide">Halo, saya Sugiati (Jia) &mdash;</p>
-              <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.18]">
-                Web Developer &amp;<br class="hidden sm:inline">
-                <span class="text-gradient-rose">System Analyst</span>
+            <!-- Headline: Direct, Clean & Human -->
+            <div class="space-y-3">
+              <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.15]">
+                Halo, saya Sugiati <span class="text-slate-500 font-normal font-sans text-2xl sm:text-4xl">(Jia)</span>.
               </h1>
-              <!-- Typing Effect -->
-              <div class="pt-1 text-sm sm:text-base font-mono font-medium text-slate-600 flex items-center justify-center lg:justify-start min-h-[28px]">
-                <span class="text-rose mr-2">&#10024;</span>
-                <span id="typingText" class="text-slate-900 font-semibold"></span>
-                <span class="typing-cursor"></span>
-              </div>
+              <p class="text-lg sm:text-2xl font-bold text-slate-800 tracking-tight flex items-center justify-center lg:justify-start gap-2">
+                <span>System Analyst</span>
+                <span class="text-slate-400 font-light">&amp;</span>
+                <span>Web Developer</span>
+              </p>
             </div>
 
-            <!-- Description based on CV -->
-            <p class="text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-              Lulusan S1 Teknologi Informasi yang memiliki fokus berkarier di bidang <strong>System Analyst</strong> dan <strong>Web Development</strong>. Berpengalaman dalam analisis kebutuhan sistem, identifikasi permasalahan, perancangan alur proses bisnis, pengelolaan database, serta pengembangan aplikasi berbasis web menggunakan <strong>Laravel, PHP, dan MySQL</strong>.
+            <!-- Authentic proposition requested by user -->
+            <p class="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed mx-auto lg:mx-0">
+              Saya membantu mengembangkan solusi digital melalui analisis kebutuhan, perancangan sistem, dan pengembangan website yang fungsional serta mudah digunakan.
             </p>
 
-            <!-- Skill Badges from CV -->
+            <!-- Focus Badges -->
             <div class="flex flex-wrap gap-2 justify-center lg:justify-start pt-1">
-              <div class="badge-tech badge-tech-rose"><i data-lucide="code-2" class="w-3.5 h-3.5"></i> <span>Web Development</span></div>
-              <div class="badge-tech badge-tech-navy"><i data-lucide="git-branch" class="w-3.5 h-3.5"></i> <span>Perancangan Sistem</span></div>
-              <div class="badge-tech badge-tech-rose"><i data-lucide="database" class="w-3.5 h-3.5"></i> <span>Database &amp; MySQL</span></div>
-              <div class="badge-tech badge-tech-navy"><i data-lucide="search" class="w-3.5 h-3.5"></i> <span>Problem Solving</span></div>
-              <div class="badge-tech badge-tech-rose"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> <span>Dokumentasi Sistem</span></div>
+              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Perancangan Sistem &amp; DFD</span>
+              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Laravel &amp; PHP 8</span>
+              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Basis Data MySQL</span>
+              <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">Pengelolaan Data &amp; Dokumen</span>
             </div>
 
             <!-- CTAs -->
             <div class="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start pt-2">
-              <a href="#projects" class="btn-primary-rose px-6 sm:px-7 py-3 rounded-full font-semibold text-xs sm:text-sm flex items-center gap-2 group">
-                <i data-lucide="sparkles" class="w-4 h-4 text-rose-300 group-hover:rotate-12 transition-transform"></i>
-                <span>Jelajahi Studi Kasus</span>
-                <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"></i>
+              <a href="#projects" class="px-6 sm:px-7 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm flex items-center gap-2 shadow-sm transition-all group">
+                <span>Lihat Proyek Saya</span>
+                <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform text-slate-300"></i>
               </a>
-              <a href="#contact" class="btn-secondary-rose px-6 sm:px-7 py-3 rounded-full font-semibold text-xs sm:text-sm flex items-center gap-2 group">
-                <i data-lucide="mail" class="w-4 h-4 text-rose group-hover:scale-110 transition-transform"></i>
+              <a href="#contact" class="px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-medium text-xs sm:text-sm flex items-center gap-2 shadow-xs transition-all group">
+                <i data-lucide="mail" class="w-4 h-4 text-slate-500 group-hover:text-slate-900 transition-colors"></i>
                 <span>Hubungi Saya</span>
               </a>
             </div>
 
-            <!-- Quick Stats -->
-            <div class="pt-5 border-t border-slate-200/70 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
-              <div class="p-2 rounded-xl bg-white/50 border border-slate-100">
+            <!-- Hidden element for main.js compatibility -->
+            <span id="typingText" class="hidden"></span>
+
+            <!-- Minimalist Editorial Stats -->
+            <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+              <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/80 shadow-2xs">
                 <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="3.80" data-decimal="true">0</p>
-                <p class="text-[11px] sm:text-xs text-slate-600 font-medium">IPK Akademik / 4.00</p>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">IPK Akademik / 4.00</p>
               </div>
-              <div class="p-2 rounded-xl bg-white/50 border border-slate-100">
+              <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/80 shadow-2xs">
                 <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="4" data-suffix="">0</p>
-                <p class="text-[11px] sm:text-xs text-slate-600 font-medium">Studi Kasus &amp; Proyek</p>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Studi Kasus Selesai</p>
               </div>
-              <div class="p-2 rounded-xl bg-white/50 border border-slate-100">
+              <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/80 shadow-2xs">
                 <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 counter-animate" data-target="3" data-suffix="">0</p>
-                <p class="text-[11px] sm:text-xs text-slate-600 font-medium">Pengalaman Lapangan</p>
+                <p class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Pengalaman Lapangan</p>
               </div>
             </div>
+
           </div>
 
-          <!-- Hero Visual Column: Profile Card with Clean CV Skills -->
+          <!-- Hero Visual Column: Refined Editorial Profile Card -->
           <div class="lg:col-span-5 relative flex justify-center">
             <div class="relative w-full max-w-sm sm:max-w-md">
 
-              <!-- Decorative glow -->
-              <div class="absolute inset-0 bg-gradient-to-tr from-rose-200/60 to-slate-200/60 rounded-3xl transform rotate-2 scale-95 -z-10 blur-sm"></div>
-
-              <!-- Main Glass Card -->
-              <div class="glass-panel rounded-3xl p-6 sm:p-7 shadow-2xl relative border border-rose-200/70 interactive-tilt" data-tilt-max="10"><div class="card-glare"></div>
+              <!-- Clean Editorial Card -->
+              <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-200/90 relative interactive-tilt" data-tilt-max="7">
+                <div class="card-glare"></div>
 
                 <!-- Card Header -->
-                <div class="flex items-center justify-between pb-3.5 border-b border-rose-100/90">
-                  <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-rose-500"></span>
-                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
-                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                <div class="flex items-center justify-between pb-3.5 border-b border-slate-100">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
                   </div>
-                  <span class="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Siap Kerja</span>
+                  <span class="text-[11px] font-mono font-medium text-slate-500 tracking-wider uppercase">Profile Overview</span>
                 </div>
 
-                <!-- Profile Photo -->
-                <div class="relative my-4 flex justify-center">
-                  <div class="photo-ring" style="width:190px;height:190px;">
-                    <img src="assets/sugiati-photo.jpg" alt="Sugiati (Jia)" class="photo-main" style="object-position:center top;">
-                  </div>
-                  <div class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-white px-3.5 py-1.5 rounded-full shadow-lg border border-rose-200 flex items-center gap-1.5 whitespace-nowrap">
-                    <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-rose"></i>
-                    <span class="text-[11px] font-bold text-slate-800">S1 Teknologi Informasi</span>
+                <!-- Profile Photo with Clean Framing -->
+                <div class="relative my-5 flex justify-center">
+                  <div class="w-48 h-48 sm:w-52 sm:h-52 rounded-2xl overflow-hidden bg-slate-900 shadow-md border-2 border-slate-200 relative">
+                    <img src="assets/sugiati-photo.jpg" alt="Sugiati (Jia)" class="w-full h-full object-cover object-top">
                   </div>
                 </div>
 
-                <!-- Keahlian Asli dari CV -->
-                <div class="mt-6 pt-4 border-t border-rose-100/80">
-                  <div class="flex items-center justify-between mb-2.5 text-xs font-bold text-slate-800">
-                    <span class="flex items-center gap-1.5">
-                      <i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose"></i>
-                      <span>Keahlian &amp; Kompetensi Inti</span>
-                    </span>
-                  </div>
+                <!-- Credentials Info -->
+                <div class="text-center space-y-1">
+                  <h3 class="font-serif font-bold text-xl text-slate-900">Sugiati <span class="font-sans font-normal text-slate-500 text-sm">(Jia)</span></h3>
+                  <p class="text-xs font-medium text-slate-600">S1 Teknologi Informasi &bull; Universitas Nurul Jadid</p>
+                </div>
 
-                  <div class="flex flex-wrap gap-1.5 justify-center text-left">
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-rose-50 text-rose border border-rose-200">Web Development</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Perancangan Sistem</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-rose-50 text-rose border border-rose-200">Sistem Informasi</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Database &amp; MySQL</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Pengelolaan Data</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-rose-50 text-rose border border-rose-200">Problem Solving</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Analytical Thinking</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-rose-50 text-rose border border-rose-200">Dokumentasi Sistem</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Administrasi Sistem</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Microsoft Word</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Microsoft PowerPoint</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-rose-50 text-rose border border-rose-200">Attention to Detail</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-slate-100 text-slate-800 border border-slate-200">Teamwork &amp; Communication</span>
-                    <span class="px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold rounded-lg bg-rose-50 text-rose border border-rose-200">Adaptability</span>
+                <!-- Competencies Snapshot -->
+                <div class="mt-5 pt-4 border-t border-slate-100">
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2.5 text-center">Kompetensi Utama Teruji:</p>
+                  <div class="flex flex-wrap gap-1.5 justify-center">
+                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">System Analysis</span>
+                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Laravel &amp; PHP</span>
+                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Basis Data MySQL</span>
+                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Flowchart &amp; DFD</span>
+                    <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-50 text-slate-700 border border-slate-200">Pengelolaan Data &amp; Dokumen</span>
                   </div>
                 </div>
 
-              </div>
-
-              <!-- Floating Badge: Web Dev -->
-              <div class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md px-3 py-2 rounded-2xl shadow-xl border border-rose-200/90 flex items-center gap-2 animate-float-slow hidden sm:flex">
-                <div class="w-8 h-8 rounded-lg bg-rose-50 flex items-center justify-center text-rose">
-                  <i data-lucide="code-2" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <p class="text-[9px] font-bold text-slate-500 uppercase">Fokus Karir</p>
-                  <p class="text-xs font-extrabold text-slate-900">Web Developer</p>
-                </div>
-              </div>
-
-              <!-- Floating Badge: System Analyst -->
-              <div class="absolute -bottom-5 -left-4 bg-white/95 backdrop-blur-md px-3 py-2 rounded-2xl shadow-xl border border-rose-200/90 flex items-center gap-2 animate-float-reverse hidden sm:flex">
-                <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
-                  <i data-lucide="git-merge" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <p class="text-[9px] font-bold text-slate-500 uppercase">Fokus Karir</p>
-                  <p class="text-xs font-extrabold text-slate-900">System Analyst</p>
-                </div>
               </div>
 
             </div>
@@ -283,95 +241,138 @@
     </section>
 
 
-    <!-- =========================================================================
-         SECTION 2: ABOUT & SKILLS
-         ========================================================================= -->
-    <section id="about" class="py-20 lg:py-28 relative">
+        <section id="about" class="py-20 lg:py-28 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
         <!-- Section Header -->
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal">
-          <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-100/70 text-rose text-xs font-semibold tracking-wider uppercase">
-            <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
-            <span>Profil &amp; Metodologi</span>
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold tracking-wider uppercase border border-slate-200">
+            <i data-lucide="user" class="w-3.5 h-3.5 text-slate-600"></i>
+            <span>Profil &amp; Pendekatan Kerja</span>
           </div>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900">Tentang Saya</h2>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900">Mengenal Saya</h2>
           <p class="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed">
-            Menghubungkan analisis proses bisnis yang matang dengan pengembangan web yang fungsional dan nyaman digunakan.
+            Menghubungkan analisis proses bisnis yang matang dengan solusi website yang fungsional dan operasional terstruktur.
           </p>
         </div>
 
-        <!-- Bio + Quick Info Grid -->
+        <!-- Bio + Layanan Konkret Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
 
-          <!-- Bio Card -->
-          <div class="lg:col-span-7 glass-panel rounded-3xl p-7 sm:p-10 shadow-lg border border-rose-200/60 flex flex-col justify-between reveal-left">
+          <!-- Left Column: Story & Karakter Kerja -->
+          <div class="lg:col-span-6 glass-panel rounded-3xl p-7 sm:p-10 shadow-lg border border-slate-200/80 flex flex-col justify-between reveal-left">
             <div class="space-y-4">
               <h3 class="font-serif text-2xl font-bold text-slate-900 flex items-center gap-2.5">
-                <i data-lucide="compass" class="w-6 h-6 text-rose"></i>
-                <span>Profil Profesional</span>
+                <i data-lucide="compass" class="w-6 h-6 text-slate-800"></i>
+                <span>Latar Belakang &amp; Pendekatan Kerja</span>
               </h3>
+              
+              <!-- Paragraph 1 from user -->
               <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-                Lulusan S1 Teknologi Informasi dari <strong>Universitas Nurul Jadid</strong> yang memiliki minat berkarier di bidang <strong>System Analyst</strong> dan <strong>Web Development</strong>. Memiliki pengalaman dalam analisis kebutuhan sistem, identifikasi permasalahan, perancangan alur proses bisnis, pengelolaan database, serta pengembangan aplikasi berbasis web menggunakan <strong>Laravel, PHP, dan MySQL</strong>.
+                Saya merupakan lulusan S1 Teknologi Informasi Universitas Nurul Jadid yang memiliki ketertarikan pada bidang teknologi informasi, pengelolaan data, dan operasional administrasi.
               </p>
+              
+              <!-- Paragraph 2 from user -->
               <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-                Terbiasa melakukan pemecahan masalah (problem solving), dokumentasi sistem (Flowchart &amp; DFD), dan pengujian aplikasi. Memiliki kemampuan berpikir analitis, teliti, adaptif, dan mampu bekerja sama dalam tim.
+                Memiliki pengalaman dalam mengelola data, melakukan pencatatan transaksi, menyusun dokumen, serta memahami alur proses kerja secara sistematis. Saya juga memiliki kemampuan dalam analisis sistem, perancangan database, dan pengembangan aplikasi web menggunakan Laravel, PHP, dan MySQL.
               </p>
+              
+              <!-- Paragraph 3 from user -->
               <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-                Selain pengembangan sistem, saya juga memiliki pengalaman dan menyediakan layanan dalam <strong>memperbaiki serta merapikan format penulisan skripsi / dokumen akademik</strong> agar sesuai dengan pedoman dan standar tata letak kelembagaan.
+                Terbiasa bekerja secara teliti, terorganisir, mampu beradaptasi dengan lingkungan baru, serta memiliki kemauan untuk terus belajar dan mengembangkan keterampilan, baik dalam bidang operasional maupun teknologi.
               </p>
             </div>
 
-            <!-- Quote -->
-            <div class="mt-6 pt-6 border-t border-rose-100 bg-rose-50/60 -mx-4 -mb-4 sm:-mx-7 sm:-mb-7 p-6 rounded-b-2xl border-l-4 border-l-rose">
-              <p class="font-cormorant italic text-lg sm:text-xl text-slate-800 font-medium">
-                &ldquo;Sebuah sistem hanya akan sekuat kejernihan logika dasarnya dan kenyamanan manusia yang menggunakannya setiap hari.&rdquo;
-              </p>
-              <p class="text-xs font-bold text-rose mt-2 uppercase tracking-wider">&mdash; Sugiati (Jia)</p>
+            <!-- Etos Kerja & Ketersediaan -->
+            <div class="mt-8 pt-6 border-t border-slate-100 space-y-3">
+              <div class="flex items-center gap-3 text-xs text-slate-700 bg-slate-50 p-3 rounded-2xl border border-slate-200/80">
+                <div class="w-8 h-8 rounded-xl bg-white shadow-2xs flex items-center justify-center text-slate-800 flex-shrink-0">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900">Ketelitian &amp; Akurasi Data</p>
+                  <p class="text-[11px] text-slate-500">Memverifikasi konsistensi pencatatan transaksi dan integritas relasi basis data.</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 text-xs text-slate-700 bg-slate-50 p-3 rounded-2xl border border-slate-200/80">
+                <div class="w-8 h-8 rounded-xl bg-white shadow-2xs flex items-center justify-center text-slate-800 flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-slate-700"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900">Domisili &amp; Ketersediaan</p>
+                  <p class="text-[11px] text-slate-500">Kab. Probolinggo, Jawa Timur &bull; Siap On-site, Hybrid, maupun Remote.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Quick Info Cards -->
-          <div class="lg:col-span-5 space-y-4 flex flex-col justify-between reveal-right">
+          <!-- Right Column: Layanan Konkret yang Klien Dapatkan -->
+          <div class="lg:col-span-6 space-y-4 flex flex-col justify-between reveal-right">
             
-            <div class="glass-panel rounded-2xl p-5 border border-slate-200/80 shadow-md">
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose flex-shrink-0">
-                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+            <!-- Layanan 1: Analisis & Perancangan Sistem -->
+            <div class="glass-panel rounded-2xl p-6 border border-slate-200/80 shadow-md space-y-2">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="git-merge" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-sm">Domisili &amp; Ketersediaan</h4>
-                  <p class="text-xs text-slate-600 mt-0.5">Kab. Probolinggo, Jawa Timur, Indonesia</p>
-                  <p class="text-xs text-emerald-600 font-semibold mt-1 flex items-center gap-1">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Siap untuk On-site, Hybrid, maupun Remote
-                  </p>
+                  <h4 class="font-bold text-slate-900 text-base">Analisis Kebutuhan &amp; Perancangan Sistem</h4>
+                  <p class="text-xs text-slate-500">System Analysis &amp; Process Modeling</p>
                 </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                Membantu memetakan proses kerja manual yang rumit menjadi diagram alur sistem yang jelas, terstruktur, dan siap diimplementasikan developer.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Flowchart Alur Bisnis</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">DFD Level 0 &ndash; 2</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">ERD Database 3NF</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Draw.io &amp; Figma</span>
               </div>
             </div>
 
-            <div class="glass-panel rounded-2xl p-5 border border-slate-200/80 shadow-md">
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-white flex-shrink-0">
-                  <i data-lucide="layers" class="w-6 h-6 text-rose-light"></i>
+            <!-- Layanan 2: Web Development Fungsional -->
+            <div class="glass-panel rounded-2xl p-6 border border-slate-200/80 shadow-md space-y-2">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="code-2" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-sm">Metodologi Pengembangan</h4>
-                  <p class="text-xs font-semibold text-rose mt-0.5">Extreme Programming (XP)</p>
-                  <p class="text-xs text-slate-500 mt-1">Pendekatan iteratif, adaptif terhadap perubahan kebutuhan, pengujian intensif, dan umpan balik pengguna secara berkelanjutan.</p>
+                  <h4 class="font-bold text-slate-900 text-base">Pengembangan Aplikasi Web Fungsional</h4>
+                  <p class="text-xs text-slate-500">Web Development &amp; Database Integration</p>
                 </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                Membangun aplikasi web yang stabil, modular, dan mudah digunakan pengguna non-teknis untuk mengotomatisasi pekerjaan rutin dan pelaporan.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Laravel &amp; PHP 8</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">MySQL Terstruktur</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Cetak PDF Otomatis</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">PWA Mobile Friendly</span>
               </div>
             </div>
 
-            <div class="glass-panel rounded-2xl p-5 border border-slate-200/80 shadow-md">
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose flex-shrink-0">
-                  <i data-lucide="file-check-2" class="w-6 h-6"></i>
+            <!-- Layanan 3: Pengelolaan Data & Dokumen -->
+            <div class="glass-panel rounded-2xl p-6 border border-slate-200/80 shadow-md space-y-2">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="file-check-2" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-sm">Layanan Tambahan</h4>
-                  <p class="text-xs font-semibold text-slate-800 mt-0.5">Perbaikan &amp; Kerapian Penulisan Skripsi</p>
-                  <p class="text-xs text-slate-500 mt-1">Penyesuaian format penulisan akademik, penomoran otomatis, margin, daftar isi, dan kerapian tata letak dokumen skripsi sesuai pedoman institusi.</p>
+                  <h4 class="font-bold text-slate-900 text-base">Pengelolaan Data &amp; Standardisasi Dokumen</h4>
+                  <p class="text-xs text-slate-500">Data Management &amp; Academic Formatting</p>
                 </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                Pencatatan data operasional terpusat serta layanan penataan format penulisan akademik (skripsi/laporan) agar rapi dan sesuai pedoman institusi.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-1.5 text-[11px]">
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Pencatatan Transaksi</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Kerapian Skripsi</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Daftar Isi Otomatis</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-800 font-medium">Pedoman Gaya Kampus</span>
               </div>
             </div>
 
@@ -388,59 +389,59 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <!-- Cat 1: Analisis & Perancangan -->
-            <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-rose reveal delay-100">
+            <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-slate-900 reveal delay-100">
               <div>
-                <div class="w-12 h-12 rounded-xl bg-rose-50 flex items-center justify-center text-rose mb-5">
+                <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900 mb-5">
                   <i data-lucide="git-merge" class="w-6 h-6"></i>
                 </div>
                 <h4 class="font-serif text-xl font-bold text-slate-900 mb-2">Perancangan Sistem</h4>
                 <p class="text-xs text-slate-600 mb-5">Analisis kebutuhan pengguna, identifikasi titik hambatan, serta perancangan skema data dan alur sistem.</p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="badge-tech badge-tech-rose">Perancangan Sistem</span>
+                  <span class="badge-tech badge-tech-navy">Perancangan Sistem</span>
                   <span class="badge-tech badge-tech-navy">Analisis Kebutuhan</span>
-                  <span class="badge-tech badge-tech-rose">Flowchart &amp; DFD</span>
+                  <span class="badge-tech badge-tech-navy">Flowchart &amp; DFD</span>
                   <span class="badge-tech badge-tech-navy">Draw.io</span>
-                  <span class="badge-tech badge-tech-rose">Figma Prototyping</span>
+                  <span class="badge-tech badge-tech-navy">Figma Prototyping</span>
                   <span class="badge-tech badge-tech-navy">Problem Solving</span>
-                  <span class="badge-tech badge-tech-rose">Extreme Programming (XP)</span>
+                  <span class="badge-tech badge-tech-navy">Extreme Programming (XP)</span>
                 </div>
               </div>
             </div>
 
             <!-- Cat 2: Web Development -->
-            <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-navy reveal delay-200">
+            <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-slate-800 reveal delay-200">
               <div>
                 <div class="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-white mb-5">
-                  <i data-lucide="code-2" class="w-6 h-6 text-rose-light"></i>
+                  <i data-lucide="code-2" class="w-6 h-6 text-slate-200"></i>
                 </div>
                 <h4 class="font-serif text-xl font-bold text-slate-900 mb-2">Web Development</h4>
                 <p class="text-xs text-slate-600 mb-5">Membangun aplikasi web modular, responsif, dan terintegrasi dengan database relasional terstruktur.</p>
                 <div class="flex flex-wrap gap-2">
                   <span class="badge-tech badge-tech-navy">Laravel</span>
-                  <span class="badge-tech badge-tech-rose">PHP</span>
+                  <span class="badge-tech badge-tech-navy">PHP</span>
                   <span class="badge-tech badge-tech-navy">MySQL</span>
-                  <span class="badge-tech badge-tech-rose">Bootstrap</span>
+                  <span class="badge-tech badge-tech-navy">Bootstrap</span>
                   <span class="badge-tech badge-tech-navy">PWA (Mobile Friendly)</span>
-                  <span class="badge-tech badge-tech-rose">HTML5 &amp; CSS3</span>
+                  <span class="badge-tech badge-tech-navy">HTML5 &amp; CSS3</span>
                   <span class="badge-tech badge-tech-navy">Black Box Testing</span>
                 </div>
               </div>
             </div>
 
             <!-- Cat 3: Dokumentasi & Administrasi -->
-            <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-rose-light reveal delay-300">
+            <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-slate-700 reveal delay-300">
               <div>
-                <div class="w-12 h-12 rounded-xl bg-rose-50 flex items-center justify-center text-rose mb-5">
+                <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900 mb-5">
                   <i data-lucide="book-open-check" class="w-6 h-6"></i>
                 </div>
                 <h4 class="font-serif text-xl font-bold text-slate-900 mb-2">Dokumentasi &amp; Administrasi</h4>
                 <p class="text-xs text-slate-600 mb-5">Penyusunan berkas spesifikasi teknis, pengelolaan data akurat, dan standardisasi dokumen.</p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="badge-tech badge-tech-rose">Dokumentasi Sistem</span>
+                  <span class="badge-tech badge-tech-navy">Dokumentasi Sistem</span>
                   <span class="badge-tech badge-tech-navy">Microsoft Word</span>
-                  <span class="badge-tech badge-tech-rose">Microsoft PowerPoint</span>
+                  <span class="badge-tech badge-tech-navy">Microsoft PowerPoint</span>
                   <span class="badge-tech badge-tech-navy">Pengelolaan Data</span>
-                  <span class="badge-tech badge-tech-rose">Kerapian Format Skripsi</span>
+                  <span class="badge-tech badge-tech-navy">Kerapian Format Skripsi</span>
                   <span class="badge-tech badge-tech-navy">Attention to Detail</span>
                 </div>
               </div>
@@ -453,9 +454,6 @@
     </section>
 
 
-    <!-- =========================================================================
-         SECTION 3: FEATURED CASE STUDIES & PROJECTS (FULL-BLEED IMAGES)
-         ========================================================================= -->
     <section id="projects" class="py-20 lg:py-28 bg-gradient-to-b from-cream via-rose-50/30 to-cream relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
@@ -483,257 +481,101 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
           <!-- ═════════════════════════════════════════════════════════════════
-               PROYEK 1: SIAKAD (FULL EDGE-TO-EDGE IMAGE HEADER)
+               PROYEK 1: SIAKAD (STANDARD BALANCED CARD)
                ═════════════════════════════════════════════════════════════════ -->
-          <!-- SIAKAD — Full-width hero card (spans both columns) -->
-          <div class="md:col-span-2 project-card glass-panel rounded-3xl overflow-hidden border border-rose-200/70 shadow-xl group reveal flex flex-col interactive-tilt" data-category="webdev" data-tilt-max="5">
-            <div class="card-glare"></div>
+          <div class="project-card glass-panel rounded-3xl overflow-hidden border border-slate-200/80 shadow-lg group reveal flex flex-col justify-between interactive-tilt" data-category="webdev" data-tilt-max="7"><div class="card-glare"></div>
+            <div>
+              <!-- Full-bleed Slider Container (Screenshots Asli SIAKAD) -->
+              <div class="relative w-full h-72 sm:h-80 overflow-hidden bg-slate-900 border-b border-slate-100">
+                <div class="slider-container w-full h-full" data-slider>
+                  <div class="slider-track flex h-full">
 
-            <!-- ── TOP: Screenshot Slider (full width, tall) ───────────────────── -->
-            <div class="relative w-full h-80 sm:h-96 overflow-hidden bg-slate-900 border-b border-rose-100">
-              <div class="slider-container w-full h-full" data-slider>
-                <div class="slider-track flex h-full">
-
-                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot1.png" data-caption="SIAKAD — Dashboard Admin: ringkasan statistik real-time siswa, guru, kelas & status nilai">
-                    <img src="assets/siakad/screenshot1.png" alt="Dashboard Admin SIAKAD" class="w-full h-full object-cover object-top">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-5">
-                      <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-rose-300 bg-rose-900/60 px-2 py-0.5 rounded-full">Admin</span>
-                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Dashboard Utama Administrator</p>
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot1.png" data-caption="SIAKAD &amp; E-Rapor — Dashboard Utama Sistem">
+                      <img src="assets/siakad/screenshot1.png" alt="SIAKAD - Dashboard Utama" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <span class="text-white text-xs font-semibold drop-shadow">Dashboard Utama Sistem</span>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-slate-900"></i> Lihat Full
+                        </span>
                       </div>
-                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
                     </div>
+
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot2.png" data-caption="SIAKAD &amp; E-Rapor — Modul Penilaian Berbasis Kurikulum Merdeka">
+                      <img src="assets/siakad/screenshot2.png" alt="SIAKAD - Modul Penilaian" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <span class="text-white text-xs font-semibold drop-shadow">Modul Rekapitulasi Nilai</span>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-slate-900"></i> Lihat Full
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot3.png" data-caption="SIAKAD &amp; E-Rapor — Pengelolaan Rapor Siswa &amp; Cetak PDF">
+                      <img src="assets/siakad/screenshot3.png" alt="SIAKAD - E-Rapor Digital" class="w-full h-full object-cover object-top">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-4">
+                        <span class="text-white text-xs font-semibold drop-shadow">E-Rapor Digital &amp; Cetak PDF</span>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md">
+                          <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-slate-900"></i> Lihat Full
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
 
-                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot2.png" data-caption="SIAKAD — Modul Input Nilai Guru: input nilai per tujuan pembelajaran (TP) berbasis Kurikulum Merdeka">
-                    <img src="assets/siakad/screenshot2.png" alt="Modul Input Nilai Guru" class="w-full h-full object-cover object-top">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-5">
-                      <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300 bg-emerald-900/60 px-2 py-0.5 rounded-full">Guru</span>
-                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Input Nilai Per Tujuan Pembelajaran</p>
-                      </div>
-                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot3.png" data-caption="SIAKAD — Rapor Digital: laporan nilai siswa per semester, ekspor PDF & unduh ZIP seluruh kelas">
-                    <img src="assets/siakad/screenshot3.png" alt="E-Rapor Digital SIAKAD" class="w-full h-full object-cover object-top">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity flex items-end justify-between p-5">
-                      <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-900/60 px-2 py-0.5 rounded-full">Wali Kelas</span>
-                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">E-Rapor Digital: PDF & ZIP Batch</p>
-                      </div>
-                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
-                    </div>
-                  </div>
-
-                  <!-- Slide 4 – 6: placeholder screenshot tambahan (ganti dengan ss asli) -->
-                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot1.png" data-caption="SIAKAD — Portal Orang Tua dengan PWA: instalasi 1-klik, notifikasi push Firebase">
-                    <img src="assets/siakad/screenshot1.png" alt="Portal Orang Tua PWA" class="w-full h-full object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end justify-between p-5">
-                      <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-sky-300 bg-sky-900/60 px-2 py-0.5 rounded-full">Orang Tua / PWA</span>
-                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Portal Orang Tua + Install PWA 1-Klik</p>
-                      </div>
-                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot2.png" data-caption="SIAKAD — Leger Nilai: rekap nilai semua mapel seluruh siswa, export Excel & PDF">
-                    <img src="assets/siakad/screenshot2.png" alt="Leger Nilai SIAKAD" class="w-full h-full object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end justify-between p-5">
-                      <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-900/60 px-2 py-0.5 rounded-full">Wali Kelas</span>
-                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Leger Nilai: Export Excel & PDF</p>
-                      </div>
-                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
-                    </div>
-                  </div>
-
-                  <div class="slider-slide w-full h-full flex-shrink-0 relative cursor-pointer group/slide" data-lightbox="assets/siakad/screenshot3.png" data-caption="SIAKAD — Ranking Siswa & Notifikasi Push Firebase: peringkat otomatis & push notification real-time">
-                    <img src="assets/siakad/screenshot3.png" alt="Ranking & Notifikasi SIAKAD" class="w-full h-full object-cover object-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end justify-between p-5">
-                      <div>
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-rose-300 bg-rose-900/60 px-2 py-0.5 rounded-full">Sistem</span>
-                        <p class="text-white text-sm font-semibold mt-1 drop-shadow">Ranking Otomatis & Push Notification</p>
-                      </div>
-                      <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/90 text-slate-900 backdrop-blur-sm shadow-md"><i data-lucide="maximize-2" class="w-3.5 h-3.5 text-rose"></i> Lihat Full</span>
-                    </div>
-                  </div>
-
+                  <!-- Controls -->
+                  <button class="slider-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Foto Sebelumnya"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+                  <button class="slider-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Foto Selanjutnya"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+                  <div class="slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"></div>
                 </div>
-                <!-- Slider Controls -->
-                <button class="slider-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Sebelumnya"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
-                <button class="slider-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20" title="Selanjutnya"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
-                <div class="slider-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20"></div>
-              </div>
-              <!-- Badge -->
-              <div class="absolute top-4 left-4 bg-rose text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20 flex items-center gap-1.5">
-                <i data-lucide="star" class="w-3 h-3"></i> Proyek Unggulan
-              </div>
-              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-slate-700 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20">
-                Laravel PWA
-              </div>
-            </div>
 
-            <!-- ── CONTENT ───────────────────────────────────────────────────── -->
-            <div class="p-6 sm:p-8 space-y-6">
-
-              <!-- Title row -->
-              <div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-rose mb-2">
-                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-                  <span>Pengembangan Sistem Informasi Akademik &amp; E-Rapor Digital</span>
+                <!-- Top Badge -->
+                <div class="absolute top-4 left-4 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-20">
+                  Studi Kasus Utama
                 </div>
-                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 group-hover:text-rose transition-colors leading-tight">
-                  SIAKAD &amp; E-Rapor — SMK Sunan Giri Probolinggo
+              </div>
+
+              <!-- Content: Clean, professional, focusing on client value & business solution -->
+              <div class="p-6 sm:p-8 space-y-4">
+                <div class="flex items-center gap-2 text-xs font-semibold text-slate-600">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-slate-900"></i>
+                  <span>Pengembangan Sistem Informasi &amp; PWA</span>
+                </div>
+                
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-rose transition-colors">
+                  SIAKAD &amp; E-Rapor — SMK Sunan Giri
                 </h3>
-                <p class="text-[10px] text-slate-500 font-mono mt-1">SMK Swasta Sunan Giri, Kota Probolinggo &bull; Juni &ndash; Agustus 2026</p>
-              </div>
+                
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Menganalisis kebutuhan dan merancang sistem informasi akademik untuk mengintegrasikan pencatatan data siswa, guru, kelas, mata pelajaran, dan penilaian dalam satu platform terpusat. Mengembangkan aplikasi berbasis <strong>Laravel, PHP, MySQL, dan Bootstrap</strong> dengan modul penilaian otomatis berbasis Kurikulum Merdeka serta pencetakan e-rapor digital ke format PDF. Dilengkapi dukungan <strong>Progressive Web App (PWA)</strong> yang dioptimasi untuk kenyamanan akses pada perangkat mobile.
+                </p>
 
-              <!-- Description -->
-              <p class="text-slate-600 text-sm leading-relaxed">
-                Sistem Informasi Akademik berbasis <strong>Laravel 13 + PHP 8.3</strong> yang dikembangkan penuh dari analisis kebutuhan hingga deployment. Menggantikan sistem lama yang manual (Excel) menjadi platform digital terintegrasi dengan <strong>5 role pengguna</strong> (Admin, Guru, Wali Kelas, Siswa, Orang Tua) dan rapor digital yang otomatis digenerate ke <strong>PDF</strong>. Dilengkapi fitur <strong>Progressive Web App (PWA)</strong> berbasis Firebase untuk notifikasi push real-time ke orang tua siswa.
-              </p>
-
-              <!-- ── Two-column: Features + Stats ──────────────────────────── -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-
-                <!-- Feature list (left) -->
-                <div class="space-y-2.5">
-                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Fitur Utama Sistem:</p>
-                  <ul class="space-y-1.5 text-xs text-slate-700">
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Dashboard real-time</strong> per role: statistik siswa, guru, nilai &amp; absensi</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Input nilai berbasis TP</strong> (Tujuan Pembelajaran) sesuai Kurikulum Merdeka</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>E-Rapor PDF otomatis</strong> + ZIP batch download seluruh kelas</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Leger nilai</strong> per kelas: export Excel &amp; PDF untuk arsip sekolah</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Manajemen master data</strong>: Guru, Siswa, Kelas, Mapel, Jadwal, Ekstrakurikuler</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Import massal</strong> data Guru &amp; Siswa via Excel (Maatwebsite)</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>PWA + Push Notification</strong> Firebase: orang tua notif nilai terbaru</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Lupa password via OTP</strong> email, reset password aman</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Ranking siswa otomatis</strong> per semester berdasarkan rata-rata nilai akhir</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-rose-100 flex items-center justify-center"><i data-lucide="check" class="w-2.5 h-2.5 text-rose"></i></span><span><strong>Log aktivitas &amp; log error</strong> sistem terekam otomatis</span></li>
-                  </ul>
-                </div>
-
-                <!-- Stats (right) -->
-                <div class="space-y-3">
-                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Statistik Proyek:</p>
-                  <div class="grid grid-cols-2 gap-2.5">
-                    <div class="bg-rose-50 border border-rose-100 rounded-2xl p-3 text-center">
-                      <div class="text-2xl font-bold text-rose font-serif">5</div>
-                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Role Pengguna</div>
-                    </div>
-                    <div class="bg-navy/5 border border-navy/10 rounded-2xl p-3 text-center">
-                      <div class="text-2xl font-bold text-navy font-serif">15+</div>
-                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Tabel Database</div>
-                    </div>
-                    <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-3 text-center">
-                      <div class="text-2xl font-bold text-emerald-600 font-serif">100+</div>
-                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Route / Halaman</div>
-                    </div>
-                    <div class="bg-amber-50 border border-amber-100 rounded-2xl p-3 text-center">
-                      <div class="text-2xl font-bold text-amber-600 font-serif">PDF</div>
-                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Rapor Otomatis</div>
-                    </div>
-                    <div class="bg-purple-50 border border-purple-100 rounded-2xl p-3 text-center">
-                      <div class="text-2xl font-bold text-purple-600 font-serif">PWA</div>
-                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Install di HP/PC</div>
-                    </div>
-                    <div class="bg-sky-50 border border-sky-100 rounded-2xl p-3 text-center">
-                      <div class="text-2xl font-bold text-sky-600 font-serif">FCM</div>
-                      <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wide mt-0.5">Push Notifikasi</div>
-                    </div>
+                <!-- Tools & Frameworks -->
+                <div class="pt-3 border-t border-slate-100">
+                  <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2">Teknologi yang Digunakan:</p>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      Laravel 13
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      PHP 8.3
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      MySQL
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      Bootstrap 5
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      PWA (Mobile)
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200">
+                      DomPDF
+                    </span>
                   </div>
                 </div>
-              </div>
 
-              <!-- ── Role Architecture chips ─────────────────────────────────── -->
-              <div class="border-t border-slate-100 pt-4">
-                <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2.5">Arsitektur Role Pengguna:</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-rose-100 text-rose-700 border border-rose-200">
-                    <i data-lucide="shield" class="w-3 h-3"></i> Admin — Master Data &amp; Konfigurasi
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-200">
-                    <i data-lucide="book-open" class="w-3 h-3"></i> Guru — Input Nilai &amp; TP
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-700 border border-purple-200">
-                    <i data-lucide="clipboard-list" class="w-3 h-3"></i> Wali Kelas — Rapor &amp; Leger
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-navy/10 text-navy border border-navy/20">
-                    <i data-lucide="user" class="w-3 h-3"></i> Siswa — Nilai &amp; E-Rapor
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-700 border border-sky-200">
-                    <i data-lucide="smartphone" class="w-3 h-3"></i> Orang Tua — PWA &amp; Notifikasi
-                  </span>
-                </div>
+                <p class="text-[10px] text-slate-500 font-mono pt-1">SMK Swasta Sunan Giri, Kota Probolinggo &bull; 2026</p>
               </div>
-
-              <!-- ── Tech Stack ─────────────────────────────────────────────── -->
-              <div class="border-t border-slate-100 pt-4">
-                <p class="text-[10px] font-bold uppercase text-slate-400 tracking-wider mb-2.5">Tech Stack &amp; Pustaka:</p>
-                <div class="flex flex-wrap gap-2 items-center">
-                  <!-- Laravel -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-red-50 text-red-700 border border-red-200">
-                    <svg class="w-3.5 h-3.5 text-[#FF2D20]" viewBox="0 0 24 24" fill="currentColor"><path d="M21.7 6.53c.01.02.01.05.01.08v10.03c0 .93-.51 1.79-1.33 2.24l-8.61 4.98c-.05.03-.1.04-.16.06-.02 0-.04.01-.06.02h-.12c-.03 0-.05-.01-.08-.02-.05-.01-.11-.03-.15-.05L2.62 18.88A2.59 2.59 0 011.29 16.64V6.61c0-.03 0-.06.01-.08 0-.03.01-.05.02-.08.01-.02.02-.05.03-.07.01-.02.02-.04.04-.06l.02-.04c.02-.02.03-.04.05-.06l.05-.05.04-.04c.02-.02.04-.03.07-.04L7.27 2.82a.51.51 0 01.51 0L13.43 6.18l.04.02c.02.02.04.03.06.05l.05.05c.02.02.03.04.05.06l.02.04c.02.02.03.04.04.06.01.02.02.05.03.07.01.03.01.05.02.08 0 .02.01.05.01.08v9.41l3.56-2.06V7.88l-3.55-2.06-3.56 2.06v4.11L7.53 13.99V3.72L4.39 5.56v11.18l8.1 4.68 8.1-4.68V7.35z"/></svg>
-                    Laravel 13
-                  </span>
-                  <!-- PHP -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
-                    <svg class="w-3.5 h-3.5 text-[#777BB4]" viewBox="0 0 24 24" fill="currentColor"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.286.164H5.874l-.448 2.34H4.1l1.443-7.5h2.17c.94 0 1.604.199 1.988.598.385.399.49.97.316 1.713a3.07 3.07 0 01-.394.99c-.187.297-.42.555-.696.771l-.188.373zm5.24-.4h-1.327l.527-2.746h1.327c.586 0 .986.115 1.197.346.21.23.256.609.138 1.137-.121.528-.379.909-.774 1.142-.395.234-.864.35-1.407.35l.32-.23zm5.583-2.759l-.363 1.903h2.203l-.244 1.272h-2.204l-.39 2.033h2.335l-.263 1.38H16.87l1.443-7.5h3.767l-.262 1.378h-2.495l.24-.466z"/></svg>
-                    PHP 8.3
-                  </span>
-                  <!-- MySQL -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                    <svg class="w-3.5 h-3.5 text-[#00758F]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5.37c-3.66 0-6.63 2.97-6.63 6.63s2.97 6.63 6.63 6.63 6.63-2.97 6.63-6.63S15.66 5.37 12 5.37zm0 2.03c2.53 0 4.6 2.07 4.6 4.6s-2.07 4.6-4.6 4.6-4.6-2.07-4.6-4.6 2.07-4.6 4.6-4.6z"/></svg>
-                    MySQL
-                  </span>
-                  <!-- Bootstrap -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
-                    <svg class="w-3.5 h-3.5 text-[#7952B3]" viewBox="0 0 24 24" fill="currentColor"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186C2.603 3.636 3.615 2.438 4.985 2.438h14.032c1.37 0 2.382 1.198 2.337 2.498-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268z"/></svg>
-                    Bootstrap 5
-                  </span>
-                  <!-- PWA -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                    <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> PWA
-                  </span>
-                  <!-- Firebase -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
-                    <svg class="w-3.5 h-3.5 text-[#FFCA28]" viewBox="0 0 24 24" fill="currentColor"><path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.972-14.97a.539.539 0 00-.548-.428.52.52 0 00-.44.30l-11.99 14.97 6.975 3.911a1.454 1.454 0 001.387 0zm-10.27-5.708l1.361-12.02.741 12.02z"/></svg>
-                    Firebase FCM
-                  </span>
-                  <!-- DomPDF -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
-                    <i data-lucide="file-text" class="w-3.5 h-3.5"></i> DomPDF &amp; mPDF
-                  </span>
-                  <!-- Excel -->
-                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1.5 rounded-full bg-green-50 text-green-700 border border-green-200">
-                    <i data-lucide="table" class="w-3.5 h-3.5"></i> Maatwebsite Excel
-                  </span>
-                </div>
-              </div>
-
-              <!-- ── Pengujian & Metodologi ─────────────────────────────────── -->
-              <div class="border-t border-slate-100 pt-4 flex flex-wrap gap-3">
-                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
-                  <span><strong>Black Box Testing</strong> — uji fungsionalitas semua modul</span>
-                </div>
-                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
-                  <i data-lucide="git-branch" class="w-3.5 h-3.5 text-rose"></i>
-                  <span><strong>Flowchart &amp; DFD</strong> — perancangan alur sistem</span>
-                </div>
-                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
-                  <i data-lucide="database" class="w-3.5 h-3.5 text-blue-500"></i>
-                  <span><strong>ERD &amp; CDM</strong> — desain database relasional</span>
-                </div>
-                <div class="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 px-3 py-2 rounded-xl">
-                  <i data-lucide="book" class="w-3.5 h-3.5 text-purple-500"></i>
-                  <span><strong>Kurikulum Merdeka</strong> — standar penilaian berbasis TP</span>
-                </div>
-              </div>
-
             </div>
           </div>
 

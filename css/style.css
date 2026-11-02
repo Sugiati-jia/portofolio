@@ -6,27 +6,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  /* Color System */
-  --navy: #0d1b2a;
-  --navy-mid: #1b2d42;
-  --navy-light: #243b55;
-  --rose: #e85d8c;
-  --rose-light: #f4a3c0;
-  --rose-pale: #fce8f3;
-  --rose-glow: rgba(232, 93, 140, 0.25);
-  --gold: #d4a855;
-  --gold-light: #f0ce84;
-  --cream: #fff9f5;
+  /* Color System - Modern Minimal Editorial */
+  --navy: #0f172a;
+  --navy-mid: #1e293b;
+  --navy-light: #334155;
+  --rose: #9e4a5d;
+  --rose-light: #d9b6c0;
+  --rose-pale: #f7eff2;
+  --rose-glow: rgba(158, 74, 93, 0.15);
+  --gold: #c29342;
+  --gold-light: #dfb86c;
+  --cream: #faf9f6;
   --white: #ffffff;
-  --text-dark: #1a1a2e;
-  --text-mid: #4a5568;
-  --text-light: #718096;
+  --text-dark: #0f172a;
+  --text-mid: #475569;
+  --text-light: #64748b;
 
   /* Gradients */
-  --grad-hero: linear-gradient(135deg, #0d1b2a 0%, #1b2d42 50%, #2d1b42 100%);
-  --grad-rose: linear-gradient(135deg, #e85d8c, #f4a3c0);
-  --grad-card: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
-  --grad-gold: linear-gradient(135deg, #d4a855, #f0ce84);
+  --grad-hero: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2d1b32 100%);
+  --grad-rose: linear-gradient(135deg, #9e4a5d, #c27888);
+  --grad-card: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.65));
+  --grad-gold: linear-gradient(135deg, #c29342, #dfb86c);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -152,7 +152,7 @@ body {
 }
 .badge:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 
-.badge-rose { background: #fce8f3; color: #c2185b; border: 1px solid #f8bbd0; }
+.badge-rose { background: #f7eff2; color: #823447; border: 1px solid #e7d1d8; }
 .badge-navy { background: #e8edf5; color: #1b2d42; border: 1px solid #c5d1e0; }
 .badge-gold { background: #fef9e7; color: #9c7800; border: 1px solid #f9e58d; }
 .badge-teal { background: #e0f7fa; color: #00695c; border: 1px solid #b2dfdb; }
@@ -521,7 +521,7 @@ section { padding: 80px 0; }
   cursor: default;
 }
 .badge-tech:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.badge-tech-rose { background: #fce8f3; color: #c2185b; border: 1px solid #f8bbd0; }
+.badge-tech-rose { background: #f7eff2; color: #823447; border: 1px solid #e7d1d8; }
 .badge-tech-navy { background: #e8edf5; color: #1b2d42; border: 1px solid #c5d1e0; }
 
 /* ── GRADIENT TEXT ── */
